@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This code is by : devil_Chandra  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Sarabun:wght@800&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word Game</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* border: none; */
+            
+        }
+        body{
+            
+        }
+
+        header {
+            height: 15vh;
+            /* background-color: rgb(21, 146, 88); */
+            /* background: rgb(19, 88, 19); */
+
+            background:linear-gradient(#067c1d,#fff);
+            text-align: center;
+            font-family: 'Carter One', cursive;
+
+        }
+
+        header h1 {
+            padding: 1rem;
+    font-weight: bold;
+    letter-spacing: 17px;
+    /* font-weight: bolder; */
+    font-size: 2em;
+    text-shadow: 2px 2px 2px 2px white;
+    text-shadow: 2px 12px 14px white;
+    font-weight: bolder;
+        }
+
+        section {
+            height: 85vh;
+            background: linear-gradient(rgb(255, 255, 255), rgb(128, 118, 184));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 50%;
+            height: 67vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgb(34 6 51),rgb(220 0 224),rgb(14 25 161));
+
+            border: none;
+            border-radius: 33px;
+            box-shadow: 0px 0px 10px 0px black;
+            text-align: center;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        .btn {
+            box-shadow: 0px 0px 8px 0px black;
+            border: none;
+            padding: 13px 19px;
+            /* height: 3em; */
+            /* width: 15em; */
+            color: rgb(172, 16, 10);
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            border-radius: 7px;
+            font-family: cursive;
+            outline: none;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: cubic-bezier(0.65,-0.25,0.25,1.95);
+        }
+        .btn:hover , .btn:focus, .btn:active{
+            letter-spacing: 0.12rem;
+            word-spacing: 0.25rem;
+        }
+
+        .inpt {
+            border: none;
+            padding: 18px 44px;
+            cursor: pointer;
+            outline: none;
+            color: black;
+            font-size: 23px;
+            margin: 2em;
+            border-radius: 20px;
+            box-shadow: 1px 1px 7px 0px black;
+            background: #c7c3c3;
+            display: none;
+            font-family: 'Sarabun', sans-serif;
+            font-weight: bolder;
+
+        }
+        .msg{
+            font-size: 27px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 20px;
+            /* font-family: 'Sarabun', sans-serif; */
+
+
+        }
+        .point{
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            border-radius: 7px;
+            font-family: cursive;
+            border:2px solid rgba(10, 197, 156, 0.925);
+            padding: 7px 26px;
+            color: white;
+            border-radius: 23px;
+            display: none;
+            box-shadow: 0px 0px 3px 0px black;
+        }
+        .pt{
+            margin: 10px;
+            padding: 15px;
+            /* border: 2px solid; */
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- codechef: devil_chandra -->
+    <header>
+        <h1>Guess The Word Game</h1>
+    </header>
+    <section>
+
+        <div class="container">
+            <div class="pt">
+                <span class="point"></span>
+            </div>
+                <h2 class="msg"></h2>
+        <input type="text" value="" placeholder="" class="inpt">
+        <button class="btn">Click here To Start</button>
+    </div>
+
+    </section>
+
+
+
+
+
+<!--  Here Comes The Script CODES> -->
+    <script>
+        // insta: devil.chandra.sekhar
+
+        let guess = document.querySelector('input');
+        let msg = document.querySelector('.msg');
+        let btn = document.querySelector('.btn');
+        let pt = document.querySelector('.point');
+
+        let game = false;
+
+        getWord = () => {
+            let arr = ["devil","Game","Bro","Hey","LOL","Monster","Corona","Danger","Love", "Spice"];
+            let i = Math.floor(Math.random() * arr.length);
+            return arr[i];
+        }
+
+        getTempWord = (arr)=> {
+            for(let i = 0; i<arr.length -1; ++i)
+            {
+                let temp = arr[i];
+                let j = Math.floor(Math.random() * i+1)
+
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            return arr;
+        }
+
+        let realWord = "";
+        let randWord = "";
+        let points = 0;
+        let outOF=0;
+
+        btn.addEventListener('click',function (){
+            if(!game)
+            {
+                pt.style.display="block";
+                pt.innerHTML= ` ${outOF} out of: ${points}`;
+                game = true;
+                // console.log("its here");
+                btn.innerHTML="guess";
+                guess.classList.too
+                guess.style.display = "block";
+
+                 realWord = getWord();
+                // console.log(realWord);
+                
+                randWord = getTempWord(realWord.split("")).join("");
+                console.log(randWord);
+                msg.innerHTML = randWord;
+
+            }
+            else{
+                outOF++;
+                pt.style.display="block";
+                let temp = guess.value;
+                if(temp === realWord)
+                {
+                    points++;
+                    pt.innerHTML= ` ${outOF} out of: ${points}`;
+                    msg.innerHTML = `It's Corrrect: You got +1point for "${realWord}" `;
+                    btn.innerHTML="Click here To Start";
+                    // guess.style.visibility= "hidden";
+                    guess.style.display = "none";
+                    guess.value = "";
+                    game = false;
+                }
+                else{
+                    // points--;
+                    pt.innerHTML= ` ${outOF} out of: ${points}`;
+                    console.log(temp);
+                    console.log(realWord);
+                    msg.innerHTML = `InCorrrect: Try Again "${randWord}" `;
+                }
+            }
+        })
+
+        
+
+    </script>
+</body>
+
+</html>
