@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+	<head>
+		<title>Sample Account Registration</title>
+		<meta charset="utf-8"/>
+		 <meta name="description" content="Code sample utilizing jQuery, RequireJS, and LessJS. Uses copious amounts of HTML5 and CSS3."/>
+		 <meta name="keywords" content="code sample, html, css, javascript, jquery, requirejs, lessjs"/>
+		<link rel="stylesheet/less" type="text/css" href="styles/registration.less"/>
+		<script data-main="scripts/main" src="scripts/lib/require.js"></script>
+	</head>
+	<body>
 
-<h1>Hacktoberfest 2021</h1>
+		<main>
+			<form class="registration js-validate">
+				<progress value="1" max="4"></progress>
+				<legend>Tell Us More About You (Step 1/4)</legend>
+				<aside class="disclaimer">Disclaimer: We never sell your information to spammers or other bad guys. <a href="#" title="Learn how we use this information.">Learn More.</a></aside>
 
-<p>Know a bit of html & need pr for hacktoberfest ? come join us in the journey.</p>
+				<fieldset class="name">
+					<input class="first left-column" placeholder="First Name" required="required"/><input class="middle-initial right-column optional" maxlength="1" placeholder="Middle Initial" pattern="(|[A-Za-z])"/>
+					<input class="last left-column" placeholder="Last Name" required="required"/><input class="suffix right-column optional" placeholder="Suffix"/>
+				</fieldset>
 
-</body>
+				<fieldset class="address">
+					<input class="street" placeholder="Street Address" required="required"/>
+					<input class="city" placeholder="City" required="required"/>
+					<input class="state left-column" maxlength="2" placeholder="State (CA, NY, etc.)" pattern="^(?:(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]))$" required="required"/><input class="zip-code right-column" maxlength="10" placeholder="Zip Code" pattern="\d{5,5}(-\d{4,4})?" required="required"/>
+				</fieldset>
+
+				<input type="submit" value="Next"/>
+			</form>
+		</main>
+
+	</body>
 </html>
