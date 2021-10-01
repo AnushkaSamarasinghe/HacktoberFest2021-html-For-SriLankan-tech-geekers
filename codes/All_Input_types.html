@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All input types in HTML</title>
+</head>
+<body>
+  <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1>
+      Input Type Text
+    </h1>
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname">
+    </form>
+    <br>
+    <h1>
+      Input Type Password
+    </h1>
+    <form>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd">
+    </form>
+    <br>
+    <h1>
+      Input Type Submit
+    </h1>
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h1>
+      Input Type Reset
+    </h1>
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+      <input type="reset">
+    </form>
+    <br>
+    <h1>
+      Input Type Radio
+    </h1>
+    <p>Choose your favorite Web language:</p>
+
+    <form>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    </form>
+    <br>
+    <h1>
+      Input Type Checkbox
+    </h1>
+    <form>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label>
+    </form>
+    <br>
+    <h1>
+      Input Type Button
+    </h1>
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+    <br>
+    <h1>
+      Input Type Color
+    </h1>
+    <form>
+      <label for="favcolor">Select your favorite color:</label>
+      <input type="color" id="favcolor" name="favcolor">
+    </form>
+    <br>
+    <h1>
+      Input Type Date
+    </h1>
+    <form>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+    </form>
+    <br>
+    <h1>
+      Input Type Email
+    </h1>
+    <form>
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email">
+    </form>
+    <br>
+    <h1>
+      Input Type Datetime-local
+    </h1>
+    <form>
+      <label for="birthdaytime">Birthday (date and time):</label>
+      <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+    </form>
+    <br>
+    <h1>
+      Input Type File
+    </h1>
+    <form>
+      <label for="myfile">Select a file:</label>
+      <input type="file" id="myfile" name="myfile">
+    </form>
+    <br>
+    <h1>
+      Input Type Hidden
+    </h1>
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <input type="hidden" id="custId" name="custId" value="3487">
+      <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h1>
+      Input Type Month
+    </h1>
+    <form>
+      <label for="bdaymonth">Birthday (month and year):</label>
+      <input type="month" id="bdaymonth" name="bdaymonth">
+    </form>
+    <br>
+    <h1>
+      Input Type Number
+    </h1>
+    <form>
+      <label for="quantity">Quantity (between 1 and 5):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5">
+    </form>
+    <br>
+    <h1>
+      Input Type Range
+    </h1>
+    <form>
+      <label for="vol">Volume (between 0 and 50):</label>
+      <input type="range" id="vol" name="vol" min="0" max="50">
+    </form>
+    <br>
+    <h1>
+      Input Type Search
+    </h1>
+    <form>
+      <label for="gsearch">Search Google:</label>
+      <input type="search" id="gsearch" name="gsearch">
+    </form>
+    <br>
+    <h1>
+      Input Type Tel
+    </h1>
+    <form>
+      <label for="phone">Enter your phone number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+    </form>
+    <br>
+    <h1>
+      Input Type Time
+    </h1>
+    <form>
+      <label for="appt">Select a time:</label>
+      <input type="time" id="appt" name="appt">
+    </form>
+    <br>
+    <h1>
+      Input Type Url
+    </h1>
+    <form>
+      <label for="homepage">Add your homepage:</label>
+      <input type="url" id="homepage" name="homepage">
+    </form>
+    <br>
+    <h1>
+      Input Type Week
+    </h1>
+    <form>
+      <label for="week">Select a week:</label>
+      <input type="week" id="week" name="week">
+    </form>
+    <br>
+    
+  </div>
+</body>
+</html>
