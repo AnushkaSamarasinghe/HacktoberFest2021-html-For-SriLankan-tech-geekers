@@ -1,0 +1,131 @@
+
+
+<html>
+    <head>
+        <title>
+            Registeration Form
+        </title>
+        <style>
+            body{
+                background-color: orange;
+            }
+            h1{
+                text-align: center;
+                color: #f1f1f1;
+            }
+            label{
+                color: blue;
+            }
+            #one{
+                background-color:wheat;
+                border: 5px;
+                border-color: lightgray;
+            }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+            <p><strong><h1><u>Student Registeration Form</u></h1></strong></p>
+            <form action="" method="get" name="myform" onsubmit="return validateform()" recquired>
+                <div id="one">
+                    <table class="center">
+                        <tr>
+                            <td> <label for="fname"> First Name:</label></td>
+                            <td> <input type="text" name="fname"  id="fname" placeholder="Ex:Shuvam Gupta" ></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="roll"> Roll Number:</label></td>
+                            <td> <input type="text" name="roll" id="roll" placeholder="1900290130160" required></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="email"> Email Id:</label></td>
+                            <td> <input type="email" name="email" id="email" placeholder="eg:abcd@gmail.com" required></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="branch">Branch:</label></td>
+                            <td> <input type="text" name="branch" id="branch" placeholder="eg:Information Technology" required></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="Year">Year:</label></td>
+                            <td>
+                             <select name="year" id="year">
+                                 <option value="I">First</option>
+                                 <option value="II">Second</option>
+                                 <option value="III">Third</option>
+                                 <option value="IV">Fourth</option>
+                               </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Address">Address:</label></td>
+                            <td> <textarea name="Address" rows="4" cols="20"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Phone no">Phone No.:</label></td>
+                            <td><input type="number" name="Phoneno" id="Phoneno" recquired></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Password">Password:</label></td>
+                            <td><input type="password" name="Password" id="Password" recquired></td>
+                        </tr>
+                        <tr>
+                            <td><label for="ConfirmPassword">Confirm Password:</label></td>
+                            <td><input type="password" name="ConfirmPassword" id="ConfirmPassword" recquired></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="dob"> Date of birth:</label></td>
+                            <td><input type="date" name="dob" id="dob"><br></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Gender:</label></td>
+                            <td> <input type="radio" id="male" name="gender" value="male">
+                             <label for="male">Male</label></td>
+                             <td>
+                                 <input type="radio" id="female" name="gender" value="female">
+                                 <label for="female">Female</label>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="college">College:</label></td>
+                            <td>
+                             <select name="college" id="college">
+                                 <option value="KIET Group Of Institutions">KIET Group Of Institutions</option>
+                                 <option value="Ajay Kumar Garg Engineering College">Ajay Kumar Garg Engineering College</option>
+                                 <option value="ABES Engineering College">ABES Engineering College</option>
+                                 <option value="Lucknow University">Lucknow University</option>
+                               </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Domains:</label></td>
+                            <td>
+                                <input type="checkbox" id="event1" name="event1" value="Machine Learning">
+                                <label for="event1"> Machine learning</label><br>
+                                <input type="checkbox" id="event2" name="event2" value="Web Developement">
+                                <label for="event2">Web Development</label><br>
+                                <input type="checkbox" id="event3" name="event3" value="Android Development">
+                                <label for="event3"> Android Development</label><br>
+                                <input type="checkbox" id="event4" name="event4" value="Cyber Security">
+                                <label for="event4">Cyber Security</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Submit">
+                            </td>
+                            <td>
+                                <input type="reset">
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                    
+                </div>
+                <script src="form.js"></script>
+    
+    </body>
+    
+</html>
