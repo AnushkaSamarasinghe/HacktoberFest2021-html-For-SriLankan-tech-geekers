@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Roll a die</title>
+
+		<style>
+			body {
+				background: #ff6600;
+				padding: 15px;
+				font-size: 30px;
+			}
+
+			img {
+				width: 150px;
+			}
+		</style>
+
+		<script>
+			var rolledNumber = Math.ceil(Math.random() * 6);
+			console.log(rolledNumber);
+
+			if (rolledNumber == 1) {
+				document.write("<h2>You rolled 1<h2>");
+				document.write(
+					'<img src="https://pasindujr.github.io/roll-a-die/sides/1.png"/>'
+				);
+			} else if (rolledNumber == 2) {
+				document.write("<h2>You rolled 2<h2>");
+				document.write(
+					'<img src="https://pasindujr.github.io/roll-a-die/sides/2.png"/>'
+				);
+			} else if (rolledNumber == 3) {
+				document.write("<h2>You rolled 3<h2>");
+				document.write(
+					'<img src="https://pasindujr.github.io/roll-a-die/sides/3.png"/>'
+				);
+			} else if (rolledNumber == 4) {
+				document.write("<h2>You rolled 4<h2>");
+				document.write(
+					'<img src="https://pasindujr.github.io/roll-a-die/sides/4.png"/>'
+				);
+			} else if (rolledNumber == 5) {
+				document.write("<h2>You rolled 5<h2>");
+				document.write(
+					'<img src="https://pasindujr.github.io/roll-a-die/sides/5.png"/>'
+				);
+			} else if (rolledNumber == 6) {
+				document.write("<h2>You rolled 6<h2>");
+				document.write(
+					'<img src="https://pasindujr.github.io/roll-a-die/sides/6.png"/>'
+				);
+			}
+		</script>
+	</head>
+	<body>
+		<!-- PAGE CONTENT WILL BE PRINTED HERE -->
+	</body>
+</html>
