@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="style.css">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script>
+      let a;
+      let date;
+      let time;
+      const options={weekday:'long',year:'numeric',month:'long',day:'numeric'};
+
+      setInterval(() => {
+    d = new Date(); //object of date()
+    date = d.toLocaleDateString();
+    hr = d.getHours();
+    min = d.getMinutes();
+    sec = d.getSeconds();
+    hr_rotation = 30 * hr + min / 2; //converting current time
+    min_rotation = 6 * min;
+    sec_rotation = 6 * sec;
+  
+    hour.style.transform = `rotate(${hr_rotation}deg)`;
+    minute.style.transform = `rotate(${min_rotation}deg)`;
+    second.style.transform = `rotate(${sec_rotation}deg)`;
+    time = hr +":"+ min+":"+sec;
+    document.getElementById('time').innerHTML= time+"   on   " + date;
+}, 1000);
+      /*--setInterval(()=>{
+        a=new Date();
+        
+        date = a.toLocaleDateString();
+        var h=a.getHours()
+        if (h.length == 1) {
+                h= "0" + h;
+            }
+        var m=a.getMinutes()
+        if (m.length == 1) {
+                m= "0" + m;
+            }
+        var s=a.getSeconds()
+        if (s.length == 1) {
+                s= "0" + s;
+            }
+
+        time = h +":"+ m+":"+s;
+        
+        document.getElementById('time').innerHTML= time+"   on   " + date;
+        
+      },1000);*/
+    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-style:italic; font:larger;"> <H1>TIK TOK</H1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <div class="jumbotron">
+          
+            <h3 >Current time:<button type="button" class="btn btn-success"><span id="time"></span></button></h3>
+            <p class="lead">
+            <hr class="my-4">
+            <p></p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Browse time</a>
+            </p>
+          </div>
+      </div>
+      <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
