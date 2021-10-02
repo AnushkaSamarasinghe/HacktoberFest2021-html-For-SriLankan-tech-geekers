@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Google Homepage</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<style>
+	.nav-bar {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  color: black;
+  font-size: 15px;
+}
+
+a {
+  display: block;
+  padding: 8px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.left-section-top,
+.right-section-top {
+  display: flex;
+}
+
+.right-section-top {
+  margin-right: 8rem;
+  margin-top: 1rem;
+}
+
+.left-section-top {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  width: 20%;
+}
+
+.search {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 35%;
+  border-radius: 30px 30px 30px 30px;
+  padding: 15px;
+  border-color: lightgray;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.buttons {
+  margin-bottom: 60px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  margin: 5px;
+}
+
+.infobar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  background: #f2f2f2;
+  color: white;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+}
+
+.right-section {
+  margin-right: 2.5rem;
+}
+
+.left-section {
+  margin-left: 2.5rem;
+}
+</style>
+<body>
+	
+	<div class="nav-bar">
+	 
+	    <div class="left-section-top">
+	    <a href="#">About</a>
+	    <a href="#">Store</a>
+	    </div>
+	    <div class="right-section-top">
+		<a href="#">Gmail</a>
+		<a href="#">Images</a>
+	    </div>
+	 
+	</div>
+	
+	<img src="google.png" class="center">
+	
+	<form>
+	  <input type="text" name="text" class="search" placeholder="Search">
+	  <div class="buttons">
+	  <button>Google search</button><button>I'm Feeling Lucky</button>
+	  </div>
+	</form>
+
+	<footer class="infobar">
+		<div class="left-section">
+			<a class="footer-link" href="#">Advertising</a>
+			<a class="footer-link" href="#">Business</a>
+			<a class="footer-link" href="#">How Search works</a>
+		      </div>
+		      <div class="right-section">
+			<a class="footer-link" href="#">Privacy</a>
+			<a class="footer-link" href="#">Terms</a>
+			<a class="footer-link" href="#">Settings</a>
+		      </div>
+	      </footer>
+	</div>
+</body>
+</html>
