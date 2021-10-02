@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    
+    <!-- //<link rel="stylesheet" href="placementpro.css"> -->
+    <style>
+        body
+{
+    margin: 0;
+    padding: 0;
+    /* display: inline-flex; */
+
+
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+}
+.container
+{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.container .box
+{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    border-radius: 4px;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container .box::before
+{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.2);
+    z-index: 2;
+    pointer-events: none;
+    
+}
+.container .box .icon
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+
+}
+.container .box h6{
+ color: #000;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+
+}
+
+.intext{
+    font-size: 10px;
+}
+
+
+.container .box:nth-child(1) .icon
+{
+    box-shadow: 0 0 0 0 #e06377;
+    background: #e06377;
+}
+.container .box:nth-child(1):hover .icon
+{
+    box-shadow: 0 0 0 400px #e06377;
+    
+}
+.container .box:nth-child(2) .icon
+{
+    box-shadow: 0 0 0 0 #622569;
+    background: #622569;
+}
+.container .box:nth-child(2):hover .icon
+{
+    box-shadow: 0 0 0 400px #622569;
+    
+}
+.container .box:nth-child(3) .icon
+{
+    box-shadow: 0 0 0 0 #5b9aa0;
+    background: #5b9aa0;
+}
+.container .box:nth-child(3):hover .icon
+{
+    box-shadow: 0 0 0 400px #5b9aa0;
+    
+}
+.container .box:nth-child(4) .icon
+{
+    box-shadow: 0 0 0 0 #f2ae72;
+background:#f2ae72;
+}
+.container .box:nth-child(4):hover .icon
+{
+    box-shadow: 0 0 0 400px #f2ae72;
+    
+}
+.container .box .content
+{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+
+}
+.container .box:hover .content
+{
+    color: #fff;
+
+}
+.container .box .content h3
+{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+.container .box .content p
+{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Main heading</h1>
+    <div class="container">
+        <div class="box">
+            <div class="icon"> <img src="assets/journal-bookmark.svg" alt=""></div>
+            <div class="content">
+                <h6>card heading</h6>
+                <p class="intext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro unde eveniet veritatis placeat, mollitia doloremque ratione suscipit quae libero velit maxime commodi quos minima natus architecto dolorem asperiores nisi quaerat?</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"> <img src="assets/code-slash.svg" alt=""></div>
+            <div class="content">
+                <h6>card heading</h6>
+                <p class="intext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ut enim atque dolor odit. Impedit dolor harum dolorem expedita aspernatur corporis iure perferendis, neque sint rerum consectetur iusto sed omnis! </p>
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="assets/card-checklist.svg" alt="">
+            </div>
+            <div class="content">
+                <h6>card heading</h6>
+                <p class="intext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur placeat eveniet incidunt ad, obcaecati accusantium, temporibus voluptatem voluptatibus porro cupiditate veritatis nesciunt sapiente ab doloremque, error velit impedit aut.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">  <img src="assets/person.svg" alt="">
+            </div>
+            <div class="content">
+                <h6>card heading</h6>
+                <p class="intext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam in repudiandae harum, quod laboriosam consequatur animi, minus laudantium magnam ipsa sequi nam perferendis dicta nulla alias? Eligendi dolor molestias officiis?</p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
