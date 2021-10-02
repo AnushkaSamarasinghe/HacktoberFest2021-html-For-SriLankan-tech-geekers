@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> calculate percentage</title>
+        <style type="text/css">
+.box{
+    width:340px;
+    Height:450px;
+    margin: 0 auto;
+    Border-radius:5%;
+    Border: 2px solid #000;
+    margin-top:5%;
+}
+.head{
+    Width:300px;
+    Height:40px;
+    Border-radius:1em; 
+    Background-color:rgba(255,204,203);
+    Border: 2px solid #000;
+    margin:8px 0px 0px 10px;
+}
+h2{
+    text-align:center;
+    margin-top:2px;
+    font-weight:bolder;
+    text-decoration: underline;
+}
+#textbox1{
+     width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    height: 40px;
+    color: gray;
+    margin-top:50px;
+    background: transparent;
+    font-size: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+   
+}
+#textbox2{
+     width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    
+outline: none;
+    height: 40px;
+    color: gray;
+    
+font-size: 20px;
+    padding-left: 10px;
+    margin-top:20px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-bottom: 2px solid gray;
+    background: transparent;
+}
+#sub{
+    Width:10em;
+    Height:4em;
+    Background-color:green;
+    Border-radius:2em;
+    outline:none;
+    Color:#FFF;
+}
+#cl{Width:10em;
+    Height:4em;
+    Background-color:green;
+    Border-radius:2em;
+    outline:none;
+    Color:#FFF;
+}
+#output{
+   font-weight: bold;
+   margin-top:85%;
+   Margin-left:2%;
+  text-align: left;
+}
+        </style>
+    </head>
+    <body>
+<div class="box">
+    <div class="head">
+        <h2>Percentage Calculator</h2>
+       <input type="number" id="textbox1" placeholder="Obtained marks..."><br><br>
+  <input type="number" id="textbox2"placeholder="Total marks...">
+  <button id="sub" onclick="calculate()">Result</button>
+  <button id="cl" onclick="clearIt()">Clear</button>
+     </div>
+     <div id="output"></div>
+</div>
+<script type="text/javascript">
+function calculate(){
+var input1=document.getElementById('textbox1').value;
+var input2=document.getElementById('textbox2').value;
+ var input3= input1/input2;
+ var result= input3*100;
+    document.getElementById("output").innerHTML="Output:-The percentage of the given input is "+result+"%.";        
+}
+function clearIt() { 
+document.getElementById('textbox1').value = "";
+document.getElementById('textbox2').value = "";
+ document.getElementById('output').innerHTML = "";
+}
+</script>
+    </body>
+</html>
