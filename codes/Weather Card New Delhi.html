@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather In New Delhi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        .city-box {
+            display: flex;
+            flex-direction: column;
+            width: 380px;
+            background-image: linear-gradient(rgb(19, 33, 226),rgb(111, 95, 180));
+            opacity: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            color: #FFFFFF;
+        }
+        .title {
+            font-family: Poppins, sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+        .cols {
+            display: flex;
+            flex-direction: row;
+            font-family: Poppins, sans-serif;
+        }
+        .m_m {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+            border-right: 1px solid #ffffff;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        .min_max {
+            font-size: 10px;
+            color: cadetblue;
+            text-align: center;
+        }
+        .el-ln {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        #comment {
+            font-family: Poppins, sans-serif;
+            font-size: 25px;
+        }
+        #min_t {
+            font-weight: bolder;
+        }
+        #max_t {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="city-box">
+        <div class="title">New Delhi</div>
+        <div class="cols">
+            <div class="m_m">
+                <div class="min_max">MAX</div>
+                <div id="max_t"></div>
+            </div>
+            <div class="m_m">
+                <div class="min_max">MIN</div>
+                <div id="min_t"></div>
+            </div>
+            <div class="el-ln">
+                <div id="elev">Elevation: </div>
+                <div id="long">Longitude: </div>
+            </div>
+        </div>
+        <div id="comment"></div>
+    </div>
+
+        <script>
+            const max_t = document.getElementById("max_t");
+            const min_t = document.getElementById("min_t");
+            const elev = document.getElementById("elev");
+            const long = document.getElementById("long");
+            const comment = document.getElementById("comment");
+
+            
+
+        async function postData(url) {
+  const response = await fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+  });
+  return response.json();
+}
+const data = postData('https://api.open-meteo.com/v1/forecast?latitude=28.6353&longitude=77.2250&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia/Calcutta');
+data.then(function(result) {
+    var code = {0: "Clear Skies", 1: "Mainly Clear", 2: "Partly Cloudy", 3: "Overcast", 
+            45: "Fog", 48: "Depositing Rime Fog",51: "Light Drizzle", 53: "Moderate Drizzle",
+            55: "Dense Drizzle", 56: "Freezing Drizzle", 57: "Freezing Drizzle", 61: "Light Rain",
+            63: "Moderate Rain", 65: "Heavy Rain", 66: "Freezing Light Rain", 67: "Freezing Heavy Rain",
+            71: "Light Snow", 73: "Moderate Snow", 75: "Heavy Snow", 77: "Snow Grains", 
+            80: "Light Rain Showers", 81: "Moderate Rain Showers", 82: "Heavy Rain Showers", 
+            85: "Light Snow Showers", 86: "Heavy Snow Showers"}
+
+   max_t.innerText = result.daily.temperature_2m_max[0] + " °C";
+   min_t.innerText = result.daily.temperature_2m_min[0] + " °C";
+   elev.innerText = "Elevation: " + result.elevation + " m";
+   long.innerText = "Longitude: " + result.longitude + " °";
+   const id = result.daily.weathercode[0]
+   comment.innerText = code[id];
+})
+        </script>
+</body>
+</html>
