@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connect Four</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style>
+            .board button {
+                width: 100px;
+                height: 100px;
+                background-color: gray;
+                border-radius: 50%;
+                border: 4px solid black;
+                margin: 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container" align='center'>
+            <h1>Welcome to Connect Four!</h1>
+            <h2>The object of this game is to connect four of your chips in a row!</h2>
+            <button type="button" class="btn btn-default btn-lg">Restart game</button>
+            <h3>Let's get started!</h3>
+
+            <table class="board">
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script>
+            var player1 = prompt("Player One: Enter Your Name, you will be Blue");
+                var player1Color = 'rgb(86, 151, 255)';
+
+                var player2 = prompt("Player Two: Enter Your Name, you will be Red");
+                var player2Color = 'rgb(237, 45, 73)';
+
+                var table = $('table tr');
+
+                // Change the color of a button
+                function changeColor(rowIndex, colIndex, color) {
+                    return table.eq(rowIndex).find('td').eq(colIndex).find('button').css('background-color', color);
+                }
+
+                // Report Back to current color of a button
+                function returnColor(rowIndex, colIndex) {
+                    return table.eq(rowIndex).find('td').eq(colIndex).find('button').css('background-color');
+                }
+
+                // Take in column index, returns the bottom row that is still gray
+                function checkBottom(colIndex) {
+                    var colorReport = returnColor(5, colIndex);
+                    for (var row = 5; row >= 0; row--) {
+                        colorReport = returnColor(row, colIndex);
+                        if (colorReport === 'rgb(128, 128, 128)') {
+                            return row;
+                        }
+                    }
+                    return -1;
+                }
+
+                // Check to see if 4 inputs are the same color
+                function colorMatchCheck(one, two, three, four) {
+                    return (one === two && one === three && one === four && one !== 'rgb(128, 128, 128)' && one !== undefined);
+                }
+
+                // Check for Horizontal Wins
+                function horizontalWinCheck() {
+                    for (var row = 0; row < 6; row++) {
+                        for (var col = 0; col < 4; col++) {
+                            if (colorMatchCheck(returnColor(row, col), returnColor(row, col + 1), returnColor(row, col + 2), returnColor(row, col + 3))) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+
+                // Check for Vertical Wins
+                function verticalWinCheck() {
+                    for (var col = 0; col < 7; col++) {
+                        for (var row = 0; row < 3; row++) {
+                            if (colorMatchCheck(returnColor(row, col), returnColor(row + 1, col), returnColor(row + 2, col), returnColor(row + 3, col))) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+
+                // Check for Diagonal Wins
+                function diagonalWinCheck() {
+                    for (var col = 0; col < 5; col++) {
+                        for (var row = 0; row < 7; row++) {
+                            if (colorMatchCheck(returnColor(row, col), returnColor(row + 1, col + 1), returnColor(row + 2, col + 2), returnColor(row + 3, col + 3))) {
+                                return true;
+                            } else if (colorMatchCheck(returnColor(row, col), returnColor(row - 1, col + 1), returnColor(row - 2, col + 2), returnColor(row - 3, col + 3))) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+
+                // Game End
+                function gameEnd(winningPlayer, tie) {
+                    $('h3').fadeOut('fast');
+                    $('h2').fadeOut('fast');
+                    $('table').fadeOut('fast');
+                    if (tie === 1) {
+                        $('h1').text("Game has ended in a tie! Restart game to play again!").css("fontSize", "50px");
+                    } else {
+                        $('h1').text(winningPlayer + " has won! Restart game to play again!").css("fontSize", "50px");
+                    }
+                }
+
+                // Restart game
+                $('.btn-lg').on('click', function () {
+                    window.location.reload();
+                })
+
+                // Start with Player One
+                var currentPlayer = 1;
+                var currentName = player1;
+                var currentColor = player1Color;
+                var chips = 0;
+
+                // Start with Player One
+                $('h3').text(player1 + ": it is your turn, please pick a column to drop your blue chip.");
+
+                $('.board button').on('click', function () {
+                    chips = chips + 1;
+
+                    // Recognize what column was chosen
+                    var col = $(this).closest("td").index();
+
+                    // Get back bottom available row to change
+                    var bottomAvail = checkBottom(col);
+
+                    // Drop the chip in that column at the bottomAvail Row
+                    if (bottomAvail !== -1) {
+                        changeColor(bottomAvail, col, currentColor);
+                    }
+
+                    // Check for a win
+                    if (horizontalWinCheck() || verticalWinCheck() || diagonalWinCheck()) {
+                        gameEnd(currentName, 0);
+                    }
+
+                    // Check for a tie
+                    if (chips === 42 && bottomAvail !== -1) {
+                        gameEnd(currentName, 1);
+                    }
+
+                    // If no win or tie, continue to next player
+                    currentPlayer = currentPlayer * -1;
+
+                    // Re-Check who the current Player is.
+                    if (bottomAvail === -1) {
+                        $('h3').text(currentName + ": invalid move, please pick a free column to drop your chip.");
+                        currentPlayer = currentPlayer * -1;
+                        chips = chips - 1;
+                    } else if (currentPlayer === 1) {
+                        currentName = player1;
+                        $('h3').text(currentName + ": it is your turn, please pick a column to drop your blue chip.");
+                        currentColor = player1Color;
+                    } else {
+                        currentName = player2;
+                        $('h3').text(currentName + ": it is your turn, please pick a column to drop your red chip.");
+                        currentColor = player2Color;
+                    }
+                })
+        </script>
+    </body>
+</html>
