@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <!-- font awesome icon adding link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Nunito", sans-serif;
+        }
+
+        body {
+            background-color: #ffe6ff;
+        }
+
+        /* Nav bar */
+
+        header {
+            display: flex;
+            position: sticky;
+            justify-content: flex-end;
+            background-color: #fff;
+            height: 100px;
+        }
+
+        .logo {
+            font-family: "Pacifico", cursive;
+            text-decoration: none;
+            color: #000;
+            font-size: 3em;
+            margin: auto;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            gap: 1em;
+            margin-right: 3%;
+        }
+
+        .icons em {
+            padding: 10px;
+            height: 10px;
+            width: 15px;
+        }
+
+        .icons em:hover {
+            font-size: 1.5em;
+            height: 10px;
+            width: 15px;
+        }
+
+        .fa-heart {
+            color: #8c1f33;
+        }
+
+        .main-menu {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            list-style: none;
+            margin-top: 2%;
+        }
+
+        .main-menu a {
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            padding: 10px 30px;
+            margin: 2px;
+            width: 100%;
+        }
+
+        .main-menu a:hover {
+            font-weight: bold;
+            color: #8c1f33;
+        }
+
+        .fa-angle-down {
+            transform: rotate(0deg);
+            transition: all 0.1s linear;
+        }
+
+        .main-menu li:hover #angle1,
+        .dropdown-1 li:hover #angle2 {
+            transform: rotate(180deg);
+            transition: all 0.3s linear;
+            font-size: 25px;
+            color: #8c1f33;
+        }
+
+        .dropdown-1 {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            position: absolute;
+            grid-row-start: 4;
+            list-style: none;
+            background-color: #fff;
+            width: 100%;
+            padding-bottom: 10px;
+            visibility: hidden;
+            transition-delay: 0.3s;
+            transform: translateY(0);
+            transition: all 0.5s ease;
+        }
+
+        .dropdown-2 {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            position: absolute;
+            z-index: 3;
+            list-style: none;
+            visibility: hidden;
+            background-color: #fff;
+            width: 100%;
+            padding-bottom: 10px;
+            transition-delay: 0.3s;
+            transform: translateY(0);
+            transition: all 0.5s ease;
+        }
+
+        .main-menu li:hover>.dropdown-1 {
+            visibility: visible;
+            transition: all 0.5s ease;
+            transform: translateY(10px);
+        }
+
+        .dropdown-1 li:hover>.dropdown-2 {
+            visibility: visible;
+            transition: all 0.5s ease;
+            transform: translateY(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <header>
+        <ul class="main-menu">
+            <li><a href="#">Shop Now <em id="angle1" class="fa fa-angle-down fa-lg"></em> </a>
+                <ul class="dropdown-1">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Trending Now</a></li>
+                    <li><a href="#">Sales & Offers</a></li>
+                    <li><a href="#">categories <em id="angle2" class="fa fa-angle-down fa-lg"></em> </a>
+                        <ul class="dropdown-2">
+                            <li><a href="#">Frocks</a></li>
+                            <li><a href="#">Party Dresses</a></li>
+                            <li><a href="#">Office Wear</a></li>
+                            <li><a href="#">Skirts</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Sarees</a></li>
+                            <li><a href="#">Tops</a></li>
+                            <li><a href="#">Trousers</a></li>
+                            <li><a href="#">Salwar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Gift Her</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <a href="#" class="logo">Shopping</a>
+        <div class="icons">
+            <em class="fa fa-search fa-lg" data-fa-transform="grow-8"></em>
+            <em class="fa fa-user-circle-o fa-lg" aria-hidden="true" data-fa-transform="grow-6"></em>
+            <em class="fa fa-heart fa-lg" data-fa-transform="grow-6"></em>
+            <em class="fa fa-shopping-cart fa-lg" data-fa-transform="grow-6"></em>
+            <div></div>
+        </div>
+    </header>
