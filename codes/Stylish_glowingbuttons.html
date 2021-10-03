@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    justify-content:center;
+    align-items:center;
+    background: #222;
+    min-height: 100vh; 
+}
+header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+ 
+    padding: 1px 4px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 100px;
+    padding: 0px 18px;
+}
+header li{
+
+  margin-left: 45px;
+    list-style: none;
+
+    border-radius: 10px;
+    font-size: 20px;
+}
+header  a{
+    text-decoration: none;
+    padding: 13px 30px;
+    color: #fff;
+}
+
+header li  a:hover{
+    border-radius: 50px;
+    background: #fff;
+    color:#222 ;
+}
+
+/* button css */
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 120px 30px 120px 90px;
+    color: #2196f3;
+    background: rgb(27, 27, 27);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    height: 280px;
+    width:400px ;
+    margin: 10px 50px;
+}
+.btn:hover{
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+} 
+.btn span{
+    position: absolute;
+    display: block;
+}
+.btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+
+}
+.btn:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+ 
+}
+
+
+
+
+.btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+
+}
+.btn:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+
+
+
+
+.btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+
+}
+.btn:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+
+
+
+.btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+
+}
+.btn:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.sect{
+    height: 50px;
+
+}
+.sect1{
+    height: .5px;
+    background:linear-gradient(transparent,#2196f3);
+    box-shadow:#2196f3 ;
+}
+@media (max-width:1000px){
+    body div .btn{
+        margin-left: 250px;
+    }
+    .sect1{
+        position: relative;
+        width: 1000px;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo"><h1 >Buttons</h1></a>
+            <ul>
+                <li class="nav-items"><a href="#">Home</a></li>
+                <li class="nav-items"><a href="#">Home</a></li>
+                <li class="nav-items"><a href="#">Home</a></li>
+            </ul>
+            
+        </header>
+    </section>
+    <section class="sect1">
+    </section>
+    <section class="sect">
+    </section>
+    <div>
+
+        
+        <a href="#" id="3sem" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Demo
+        </a>
+
+        
+
+        
+        <a href="#" id="4sem" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Demo
+        </a>
+
+
+        
+        <a href="#" id="5sem" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Demo
+        </a>
+
+
+        
+        <a href="#" id="6sem" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            DemoS
+        </a>
+
+
+        
+        <a href="#" id="7sem" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Demo
+        </a>
+
+
+        
+        <a href="#" id="8sem" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Demo
+        </a>
+
+
+    </div>
+    </body>
+</html>
