@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body , html{
+    height: 100%;
+}
+section{
+  position: relative;
+  top: 50%;
+  height: 50%;
+  background: linear-gradient(to bottom, #e3e5e7, #fef9fa);
+}
+div.ball{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+}
+.ball::after, .ball::before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.ball::before{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-shadow: inset 25px -25px 35px rgba(100, 100, 100, 0.5);
+}
+.ball::after{
+  top: 100%;
+  right: 50%;
+  width: 80%;
+  height: 20%;
+  background: rgba(100, 100, 100, 0.7);
+  filter: blur(7px);
+  transform: translate(10%, -55%);
+  z-index: -1;
+}
