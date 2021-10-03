@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+    <style>
+        body{
+            background-image: url(https://bit.ly/3isbX0u);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .form{
+            background: rgb(72, 107, 20);
+            width: 50%;
+            padding: 40px;
+            margin: 100px auto;
+        }
+        p{
+            font-size: 20px;
+            color: black;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body >
+    
+    <div class = "form">
+  <i><h1>WELCOME TO LONDON GOLF CLUB MEMBERSHIP PORTAL</h1></i>
+  <h3> Kindly Fill your details correctly:</h3>
+  <form id = "Membership">
+    <p>  Name: <input type="text">  </p>
+
+     <p> E-mail: <input type="email" name="myemail" id="email-id" ></p>
+     <p> Gender: </p>
+     <p> <input type="radio" name="mygender"  value = "male"> Male
+         <input type="radio" name="mygender" value="female"> Female
+         <input type="radio" name="mygender" value="other">Other</p>
+    
+    <p> How many years of playing experience you have?  </p>
+      <p>0-5 <input type="radio" name="exp" id="exp1"> 
+        5-15 <input type="radio" name="exp" id="exp2">
+        15+ <input type="radio" name="exp" id="exp3">
+        </p>
+     
+    <p> Address: <input type="text" name="myaddress" id="address"></p>
+    <p>Contact: <input type="tel" name="mynumber" id="number" placeholder="e.g:+91 XXXXXXXXXX"></p>
+    <p>Occupation: <input type="text" name="myoccu" placeholder="e.g Student , Doctor etc."></p>
+    <p> No. of titles won
+        <input type="radio" name="won" id="tit1"> Less than 5
+        <input type="radio" name="won" id="tit2"> Less than 10
+        <input type="radio" name="won" id="tit3"> More than 10
+
+    </p>
+    <p> How do you came to know about our club? 
+        <input type="radio" name="choice" id="1"> Newspaper
+        <input type="radio" name="choice" id="2"> TV Advertisment
+        <input type="radio" name="choice" id="3"> Magazines
+        <input type="radio" name="choice" id="4"> Social Media
+        <input type="radio" name="choice" id="5"> Friends
+        <input type="radio" name="choice" id="6"> Other
+
+    </p>
+    
+
+  </form>
+  <p> To continue , Click on "Join Now" button below</p>
+  <button type="submit" id="Membership">Join Now</button>
+  </div>
+
+    
+</body>
+</html>
