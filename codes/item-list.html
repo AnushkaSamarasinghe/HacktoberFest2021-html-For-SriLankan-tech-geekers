@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITEM-LIST</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ 
+ @media screen 
+ and (min-device-width: 1200px) 
+ and (max-device-width: 1600px) 
+ and (-webkit-min-device-pixel-ratio: 1) 
+  {
+ 
+     .h11{
+         font-size: 60px;
+         color: rgb(255, 255, 255);    
+         text-align: center;
+         
+     }
+ 
+ }
+ 
+ header{
+     max-width: 1200px;
+     max-height: 100px;
+     /* background-color: brown; */
+     margin: 0 auto;
+     margin-top: 10px;
+        
+ 
+ }
+ /* .code{
+     text-align: center;
+     
+ } */
+ header h1{
+     font-size: 40px;
+     color: #fff;    
+     text-align: center;
+     
+ }
+ 
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins',sans-serif;
+ }
+ body{
+     /* display:flex;
+     justify-content:center;
+     align-items: center;
+      */
+     min-height: 100vh;
+     background: #151516;
+ }
+ .container2{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     /* min-height: 100vh; */
+     max-width: 1200px;
+     margin: 5px auto;
+ 
+ }
+ 
+ .container2 .card{
+     position: relative;
+     width: 30rem;
+     height: 150px;
+     box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+                 inset -5px -5px 15px rgba(255,255,255,0.1),
+                        5px 5px 15px rgba(0,0,0,0.3),
+                        -5px -5px 15px rgba(255,255,255,0.1);
+     border-radius: 15px;
+     margin: 30px;
+ 
+ }
+ .container2 .card::before{
+     content: '';
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 50%;
+     height: 100%;
+     background: rgba(255,255,255,0.1);
+ }
+ 
+ .container2 .card .box{
+     position: absolute;
+     top: 20px;
+     left: 20px;
+     right: 20px;
+     bottom: 20px;
+     background: #2a2b2f;
+     border: 2px solid #1e1f23;
+     border-radius: 15px;
+     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+     transition: 0.5s;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+ 
+ }
+ .container2 .card .box::before{
+     content: '';
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 50%;
+     height: 100%;
+     background: rgba(255,255,255,0.05);
+     pointer-events: none;
+ }
+ 
+ 
+ .container2 .card .box:hover{
+     transform: translateY(-20px);
+     box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+     
+ }
+ 
+ .container2 .card .box .content{
+     padding:20px;
+     text-align: center;
+ }
+ .container2 .card .box .content h2{
+     position: absolute;
+     top: 10px;
+     right: 30px;
+     font-size:4em;
+     color: rgba(255,255,255,0.05);
+ }
+ .container2 .card .box .content h3{
+     font-size: 1.8em;
+     color: rgba(255,255,255,0.5);
+     z-index: 1;
+     transition: 0.5s;
+     
+ }
+ 
+ .container2 .card .box .content a{
+     position: relative;
+     display: inline-block;
+     padding: 2px 20px 2px 20px;
+     background: #000;
+     margin-top: 15px;
+     border-radius: 20px;
+     text-decoration: none;
+     font-weight: 400;
+     color: #fff;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+ }
+ .container2 .card:nth-child(1) .box .content a
+ {
+     background: #2196f3;
+ }
+ .container2 .card:nth-child(2) .box .content a
+ {
+     background: #e91e63;
+ }.container2 .card:nth-child(3) .box .content a
+ {
+     background: #97dc47;
+ }
+ 
+ 
+ .container2 .card:nth-child(4) .box .content a
+ {
+     background: #2196f3;
+ }
+ .container2 .card:nth-child(5) .box .content a
+ {
+     background: #e91e63;
+ }
+ .container2 .card:nth-child(6) .box .content a
+ {
+     background: #97dc47;
+ }
+ 
+ 
+ .container2 .card:nth-child(7) .box .content a
+ {
+     background: #2196f3;
+ }
+ .container2 .card:nth-child(8) .box .content a
+ {
+     background: #e91e63;
+ }
+ .container2 .card:nth-child(9) .box .content a
+ {
+     background: #97dc47;
+ }
+    </style>
+    
+</head>
+
+<body>
+    <div class="code">
+    <header>
+        <h1 class="h11">ITEM-LIST</h1>
+    </header>
+</div>
+    <div class="container2">
+
+
+        
+
+
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Item 1</h3>                    
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Item 2</h3>                    
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <div class="container2"> 
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Item 3</h3>                    
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>04</h2>
+                    <h3>Item 4</h3>                    
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <div class="container2"> 
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>05</h2>
+                    <h3>Item 5</h3>                    
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>06</h2>
+                    <h3>Item 6</h3>                     
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container2"> 
+
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>07</h2>
+                    <h3>Item 7</h3>                     
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="box">
+                <div class="content">
+                    <h2>08</h2>
+                    <h3>Item 8</h3>                     
+                    <a href="#" >Visit</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>
