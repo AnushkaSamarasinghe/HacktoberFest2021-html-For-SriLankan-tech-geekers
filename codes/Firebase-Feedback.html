@@ -1,0 +1,236 @@
+<!-- Its A Simple Feedback Form -->
+<!-- It Uses Firebase to Store all its feedback -->
+<!-- You can get your Credentials from Firebase Console -->
+
+
+
+<!DOCTYPE html>
+    <html>
+
+           
+        <body>
+
+          <h1><center>Firebase-Feedback</center></h1>
+          <h5><center>HacktoberFest 21</center></h5>
+         
+
+
+           
+              <input  type="text" placeholder="Name"  id = "namebox" placeholder = "Name"> </input>  
+              <input  type="text" placeholder="Email" id = "emailbox" placenolder = "Email"></input>
+              <textarea  type="text"  placeholder="Feedback / Comment" id = "commentbox" placeholder = "Comment"></textarea>
+        
+             
+              <button class= "button" type="submit" id="isubmit"> Submit Feedback </button>
+         
+
+
+           <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+                <!-- TODO: Add SDKs for Firebase products that you want to use
+                    https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> 
+
+
+
+            <script id  = "MainScript">
+                
+
+                   //Enter Your Credentials
+
+                  //  -------------------------
+                    var firebaseConfig = {
+                            apiKey: "",
+                            authDomain: "",
+                            databaseURL: "",
+                            projectId: "",
+                            storageBucket: "",
+                            messagingSenderId: "",
+                            appId: "",
+                            measurementId: ""
+                          };
+                      
+                     // ---------------------
+                      
+                      // Initialize Firebase
+                      firebase.initializeApp(firebaseConfig);
+                      firebase.analytics();
+
+                      //Ready Data
+
+                      var nameV , emailV , commentV ;
+
+                      function Ready(){
+                          nameV = document.getElementById('namebox').value;
+                          emailV = document.getElementById('emailbox').value;
+                          commentV = document.getElementById('commentbox').value;
+
+                      }
+
+                      ///Insert
+                      document.getElementById('isubmit').onclick = function(){
+                          Ready();
+                          firebase.database().ref(nameV).set({
+
+                              name : nameV,
+                              email : emailV,
+                              comment : commentV
+
+                          });
+
+                          Clear();
+                      }
+
+                      function Clear(){
+                        document.getElementById("namebox").value = "";
+                        document.getElementById("emailbox").value = "";
+                        document.getElementById("commentbox").value = "";
+
+
+                      }
+
+
+
+            </script>
+            
+
+
+            <style>
+              @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+            body { background:#13151C; }
+            form { max-width:420px; margin:50px auto; }
+
+            h1 {
+              color:white;
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-size: 60px;
+
+            }
+
+            h5 {
+              color:white;
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-size: 30px;
+            }
+
+
+            #note {
+              color : gray ;
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-size: 12px;
+
+            }
+
+            #feedbackrule {
+              color :gray;
+              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              font-size: 15px;
+
+            }
+              
+            #lastline {
+                color :white;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 18px;
+              
+              }
+
+            /* Class by '.'  Or Id by '#'*/
+
+            #namebox {
+              color:white;
+              font-family: Helvetica, Arial, sans-serif;
+              font-weight:500;
+              font-size: 18px;
+              border-radius: 5px;
+              line-height: 22px;
+              background-color: transparent;
+              border:2px solid white;
+              transition: all 0.3s;
+              padding: 13px;
+              margin-bottom: 15px;
+              width:100%;
+              box-sizing: border-box;
+              outline:0;
+            }
+
+            #iname :hover { border:10px solid white; }
+
+
+              #emailbox {
+                color:white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:500;
+                font-size: 18px;
+                border-radius: 5px;
+                line-height: 22px;
+                background-color: transparent;
+                border:2px solid white;
+                transition: all 0.3s;
+                padding: 13px;
+                margin-bottom: 15px;
+                width:100%;
+                box-sizing: border-box;
+                outline:0;
+              }
+
+          
+            #commentbox {
+              vertical-align: text-top;
+              height: 150px;
+              line-height: 150%;
+              resize:vertical;
+              color:white;
+              font-family: Helvetica, Arial, sans-serif;
+              font-weight:500;
+              font-size: 18px;
+              border-radius: 5px;
+              line-height: 22px;
+              background-color: transparent;
+              border:2px solid white;
+              transition: all 0.3s;
+              padding: 13px;
+              margin-bottom: 15px;
+              width:100%;
+              box-sizing: border-box;
+              outline:0;
+            }
+
+
+            #isubmit {
+              border:2px solid white;
+              border-radius: 5px;
+              background-color: #13151C;
+              padding: 22px 30px;
+              text-align: center;
+              display: inline-block;
+              font-size: 18px;
+              margin: 4px 2px;
+              cursor: pointer;
+              color: white;
+            }
+
+
+            #isubmit:hover {
+              background-color: white;
+              color: black;
+            }          
+            
+            </style>
+
+          </br>
+          </br>
+          </br>
+          </br>
+
+           
+          <center>
+            <p id= "lastline">Created By -  SB  || HacktoberFest 21 - Contribution<br> </p>
+          </center>
+        </body>
+       
+</html>
+

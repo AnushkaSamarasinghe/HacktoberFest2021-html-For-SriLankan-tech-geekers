@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>🧜Diksha Personal Site</title>
+  </head>
+  <body style="background-color: #003638">
+    <table cellspacing="20">
+      <tr>
+        <td><img width="150" height="150" src="chess queen.jpg" alt="image"></td>
+        <td><h1>Diksha Kumari</h1>
+        <p><em>Works at <strong>student</strong>.</em></p>
+        <p>Third year <em>undergraduation student</em>.</p></td>
+      </tr>
+    </table>
+    <hr>
+    <h3>Endorcements</h3>
+    <ul>
+      <li>Language <ul>
+        <li>English</li>
+        <li>Hindi</li>
+        <li>Telugu</li>
+      </ul></li>
+      <li>C/C++</li>
+      <li>Education<ul>
+        <li>RPS Public school</li>
+        <li><a href="https://www.resonance.ac.in/">resonance</a></li>
+        <li>MAIT</li>
+      </ul></li>
+      <li>Web Development</li>
+    </ul>
+    <hr>
+    <h3> My hobbies</h3>
+    <ol type="a">
+      <li>Painting</li>
+      <li>Dancing</li>
+      <li>Programming</li>
+    </ol>
+    <hr>
+    <table border="1">
+      <thead>
+        <tr>
+        <th>Duration</th>
+        <th>Job</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2013-2016</td>
+          <td>intermediate</td>
+        </tr>
+        <tr>
+          <td>2016-2018</td>
+          <td>coaching</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+    <h3>Skills</h3>
+    <table cellspacing="10">
+      <tr>
+        <td>  <table>
+            <tr>
+              <td>communication</td>
+              <td>💡💡💡💡</td>
+            </tr>
+            <tr>
+              <td>singing</td>
+              <td>💡💡💡💡💡</td>
+            </tr>
+            <tr>
+              <td>dancing</td>
+              <td>💡💡💡</td>
+            </tr>
+            <tr>
+              <td>painting</td>
+              <td>💡💡💡💡💡</td>
+            </tr>
+          </table></td>
+        <td><table>
+          <tr>
+            <td>Travelling</td>
+            <td>💡💡</td>
+          </tr>
+          <tr>
+            <td>reading</td>
+            <td>💡</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <hr>
+<form class="" action="avog@xyzl.com" method="post" enctype="text/plain">
+  <label>Name:</label>
+  <input type="text" name="Yourname" value="">
+  <input type="submit"><br>
+  <input type="checkbox" name="good" value="">
+  <input type="color" name="yourcolor" value=""><br>
+  <input type="radio" name="Base" value="">
+  <input type="date" name="Yourdate" value=""><br>
+  <input type="file" name="Yourfile" value=""><br>
+  <label>password</label>
+  <input type="password" name="Password" value=""><br>
+  <label\>email</label>
+  <input type="email" name="Youremail" value=""><br>
+  <label for="">Description</label>
+  <textarea name="description" rows="2" cols="10"></textarea>
+</form>
+
+    <hr>
+    <a href="images.html">images</a>
+  </body>
+</html>

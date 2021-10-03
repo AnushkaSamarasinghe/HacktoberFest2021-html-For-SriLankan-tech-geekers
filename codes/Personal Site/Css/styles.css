@@ -1,0 +1,31 @@
+body {
+  /* background-color: #e0ece4; */
+  /* background-image: url("biodata.png"); */
+  background-image: src("biodata.png");
+  background-repeat: no-repeat;
+}
+
+hr {
+  border-color: grey;
+  border-style: none;
+  border-top-style: dotted;
+  /* border-height : 0px; */
+  border-width: 5px;
+  width: 10%;
+}
+
+h1{
+  color: #66BFBF;
+}
+/* h3{
+  color: #132743;
+} */
+
+a:link{
+  color: #965d62;
+}
+
+
+#About{
+  color : #0f3460;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Temp</title>
+</head>
+
+<style>
+    body{
+        background-image: url('https://media.gettyimages.com/photos/medical-thermometer-picture-id173005355?s=2048x2048');
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <div style="border: 2px solid black; background-color: coral; padding: 12px;">
+
+        <div style="border: 5px solid black; text-align: center; border-radius: 20px;">
+
+            <h1>CALCULATOR</h1>
+        </div>
+        <form action="" style="font-weight: bolder;">
+
+            <br>
+            <label for="cel">Celsius : </label>
+            &nbsp;
+            <input type="text" id="cel">
+            <br>
+            <br>
+            <label for="fre">Farhnite : </label>
+            <input type="text" id="fre">
+            <br>
+            <br>
+            <input type="button" value="convert C to F" onclick="fun()">    
+            <input type="button" value="convert F to C" onclick="fun2()">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    <script>
+        function fun(){
+
+            let a = document.getElementById('cel').value;
+
+            let f = (9/5)*a + 32;
+            document.getElementById('fre').value = f;
+        }
+        function fun2(){
+
+            let a = document.getElementById('fre').value;
+
+            let c = (a-32)*(5/9);
+            document.getElementById('cel').value = c;
+        }
+    </script>
+</body>
+</html>

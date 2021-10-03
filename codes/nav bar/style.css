@@ -1,0 +1,93 @@
+@import url('https://fontawesome.com/icons/caret-down?style=solid');
+@import url('https://fontawesome.com/icons/arrow-up?style=solid');
+html{
+scroll-behavior:smooth;
+}
+body{
+	background:#dedede;
+	font-family:arial;
+	margin:0;
+	padding:0;
+}
+.gotop
+{
+	position:fixed;
+	width:40px;
+	height:30px;
+	background:#27ae60;
+	bottom:20px;
+	right:20px;
+	text-decoration:none;
+	text-align: center;
+	line-height: 90px;
+	color:white;
+	font-size:25px;
+	
+}
+.otop{
+	position: fixed;
+	text-decoration: none;
+	color: white;
+	margin-left: 55px;
+	font-size: x-large;
+	margin-top: 15px;
+}
+.dropdown{
+	margin:0 auto;
+}
+nav{
+	height:80px;
+	background:#000000;
+	box-shadow:0 10px 15px rgba(0,0,0,0.1);
+}
+nav ul{
+	padding:0;
+	margin:0;
+	float :right;
+	margin-right: 30px;
+}
+nav ul li{
+	background:#000000;
+	position:relative;
+	list-style:none;
+	display: inline-block;
+}
+nav ul li a {
+	display:block;
+	padding:0 15px;
+	color:white;
+	text-decoration:none;
+	line-height:60px;
+	font-size:20px;
+}
+nav ul li a:hover{
+	background:#243342;
+}
+
+nav ul ul{
+	position:absolute;
+	top:60px;
+	display:none;	
+}
+nav ul li:hover>ul{
+	display:block;
+}
+nav ul ul li{
+	width:150px;
+	float:none;
+	display:list-item;
+	position:relative;	
+}
+nav ul ul ul li{
+	position:relative;
+	top:-60px;
+	left:150px;
+}
+.body{
+	padding: 0 20px;
+}
+.body img{
+	width:100%;
+	max-width:700px;
+	margin:0 20px;
+}
