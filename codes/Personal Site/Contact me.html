@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="C:\Users\Amita Dagur\Desktop\Web Development\Personal Site\Css\styles.css">
+
+
+    <script>
+      function Enroll() {
+        var name = document.forms["MyForm"]["Your Name"];
+        var email = document.forms["MyForm"]["Your Email Id"];
+        var message = document.forms["MyForm"]["Your Message"];
+
+        if (name.value == "") {
+          alert("Please Enter Your Name!");
+          name.focus();
+          return false;
+        }
+
+        if (email.value == "") {
+          alert("Please Enter Your E-mail Address!");
+          email.focus();
+          return false;
+        }
+
+        if (message.value == "") {
+          alert("Please Enter Your Message!");
+          message.focus();
+          return false;
+        }        
+      }
+    </script>
+    
+  </head>
+  <body>
+    <h3>My Contact Details</h3>
+    <ul>
+      <li>Braj Bazar Painth Pisawa,<br>Aligarh,202155</li>
+      <li>Phone : 9548835161 </li>
+      <li><a href="https://api.whatsapp.com/qr/CYXAVAMGT6ZOH1">Whatsapp</a><img src="https://img.techpowerup.org/201010/whatsapp-icon.png" width="18"height="18"></img></li>
+      <li><a href="https://www.facebook.com/Tushantdagur125">Facebook</a><img src="https://img.techpowerup.org/201010/social-facebook-box-blue-icon.png"width="18"height="18"></img></li>
+      <li><a href="https://www.instagram.com/tushant1511/?igshid=1726chsj2zjmy">Instagram</a><img src="https://img.techpowerup.org/201010/download.jpg"width="18"height="18"></img></li>
+      <li><a href="https://twitter.com/DagurTushant?s=08">Twitter</a><img src="https://img.techpowerup.org/201010/twitter-icon.png"width="18"height="18"></img></li>
+      <li>Email : <a href="https://mail.google.com/mail/u/1">Tushantdagur125@gmail.com</a></li>
+    </ul>
+    <hr>
+    <h3>Drop Your Message</h3>
+    <form name="MyForm" class="" action="mailto:tushantdagur125@gmail.com"  enctype="text/plain" method="POST">
+      <label>Your Name:</label>
+      <input type="text"id="Your Name"name="Your Name"><br>
+      <label>Your Email:</label>
+      <input type="email"id="Your email Id"name="Your Email Id"><br>
+      <label>Your Message</label><br>
+      <textarea name="Your Message" rows="10" cols="30"></textarea><br>
+      <input type="Submit" onclick="Enroll();">
+    </form>
+  </body>
+</html>
