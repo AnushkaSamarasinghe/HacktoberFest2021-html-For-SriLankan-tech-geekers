@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(253, 238, 214);
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#bmivalue{
+    display: flex;
+}
+.chart{
+    width: 300px;
+    border: 2px solid black;
+    margin-top: 30px;
+    padding-bottom: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 62, 95);
+}
+td{
+    text-align: center;
+    padding: 7px;
+}
+tr{
+    height: 4px;
+}
+button{
+    background-color: rgb(245, 127, 150);
+    border: 2px solid black;
+}
+p{
+    font-size: xx-large;
+    color: black;
+}
