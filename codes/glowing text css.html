@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Glowing Text</title>
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins' , sans-serif;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+}
+
+h1
+{
+	font-size: 6vh;
+	font-weight: 500;
+	color: #222;
+	letter-spacing: 5px;
+	cursor: pointer;
+}
+
+h1 span
+{
+	transition: 0.7s;
+}
+
+h1:hover span:nth-child(1)
+{
+	margin-right: 10px;
+}
+
+h1:hover span:nth-child(2)
+{
+	margin-left: : 60px;
+}
+
+h1:hover span
+{
+	color: #fff;
+	text-shadow: 0 0 10px #fff,
+	             0 0 20px #fff,
+	             0 0 40px #fff,
+	             0 0 80px #fff,
+	             0 0 120px #fff,
+	             0 0 160px #fff;
+}
+	</style>
+</head>
+<body>
+<h1><span>I CAN</span>'T <span>DO THIS</span></h1>
+</body>
+</html>
