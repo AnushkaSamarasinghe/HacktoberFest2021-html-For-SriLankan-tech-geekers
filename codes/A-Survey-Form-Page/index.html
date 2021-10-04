@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>A Survey Form Page</title>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <html>
+<head>
+  <title>Survey Form</title>
+    <h1 id = "title">Tell me about you</h1>
+    <p id="description">Let us know what you like</p>
+</head>
+<body>
+  <form id="survey-form">
+    <div>
+      <label for="name-label" id="name-label" class="labels" >Name:</label>
+        <input type="text" id= "name" placeholder = "Enter your name" required>
+      <label for="email-label" id="email-label" class="labels">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="number-label" id="number-label" class="labels">Age:</label>
+        <input type="number" id="number" min="1" max="120" id="number-label" placeholder= "Enter your age" required>
+    </div>
+    <div class="labels">
+        <label for="option">Which in your option do you like more?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+          <option disabled value>Select an option</option>
+          <option  value="student">Movies</option>
+          <option value="job">Games</option>
+          <option value="learner">Music</option>
+          <option value="preferNo">Food</option>
+          <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+    <div class="labels" id="radio-label">
+      <label for="would_recommend"><br>How you came respond this survey here?</label>
+    </div>
+    <div class="input">
+        <ul>
+          <li class="radio"><label><input name="radio-buttons" value="1"  type="radio" class="userRatings" >Alone</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="2"  type="radio" class="userRatings" >I found on the internet</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="3"  type="radio" class="userRatings" >A friend told me</label></li>
+        </ul>
+    </div>
+    <div class = "labels">
+      <p> How do you often to desloce in your city?</p>
+  </div>
+  <div class= "input">
+      <input type="checkbox" name="boxes" value="none" checked> None <br>
+      <input type="checkbox" name="boxes" value="motorbike"> Motorbike<br>
+    <input type="checkbox" name="boxes" value="car" > Car<br>
+    <input type="checkbox" name="boxes"
+  value="cycle" > Bycycle<br>
+      <input type="checkbox" name="boxes"
+  value="train" > Train<br>
+      <input type="checkbox" name="boxes"
+  value="walking" > Walking<br>
+      <input type="checkbox" name="boxes"
+  value="walking" > Bus<br><br>
+  </div>
+   <div>
+      <label for="comment">
+        <p class = "labels">Any thoughts?</p></label>
+        <textarea id="advanced" name="comment" rows="4" cols="30" maxlength="250" wrap="hard"> Write something if you want!</textarea>
+    </div>
+
+    <div class="form-container" >
+			<button id="submit" type="submit">Submit</button>
+		</div>
+
+  </form>
+</body>
+</html>
