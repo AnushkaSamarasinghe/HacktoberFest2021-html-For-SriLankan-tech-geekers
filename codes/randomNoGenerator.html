@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+
+<style>
+* {
+    
+    margin: 20px;
+    padding: 0;
+}
+body {
+    margin: 0;
+    background-color: rgb(37, 33, 33);
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+label , input{
+    margin: 0 0 0 6px;
+    font-size: 1rem;
+}
+#btn,#btn-print {
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    padding: 2px;
+    background-color: greenyellow;
+    color: black;
+    margin: 0;
+}
+#btn:hover,#btn-print:hover {
+    background-color: green;
+    color: white;
+} 
+table {
+    margin: auto;
+    border: 2px solid rgb(236, 224, 224);
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+td,th {
+    padding: 6px;
+}
+@media screen and (max-width: 450px){
+
+h1 {
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+}
+}
+
+</style>
+
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <label>Enter a number</label>
+    <input type="number" id="number" name="num">
+    <input type="button" id="btn" value="SUBMIT">
+    <input type="button" id="btn-print" value="Print">
+    <h3>Random Numbers</h3>
+
+    <table id="tab" width="60%" border="1">
+        <tr>
+            <th>Sr No.</th>
+            <th>Random Number</th>
+        </tr>
+    </table>
+
+<script>
+
+document.getElementById("btn").addEventListener("click",tableDataFill);
+     function tableDataFill() {
+        const h = document.querySelectorAll("td");
+        for(let i = 0; i < h.length; i++){
+        h[i].parentNode.removeChild(h[i]);
+        console.log(h[i].parentNode,h[i]);
+        }
+        var sr=0;
+        var n = document.getElementById("number").value;
+        console.log(n);
+        for(let i=0;i<n;i++) {
+            var number=random();   
+            tableCreate(++sr,number);
+        }
+        check=true;
+     }
+     function tableCreate(text1,text2) {
+        const tab = document.getElementById("tab");
+        const tabRow = document.createElement("tr");
+        tab.appendChild(tabRow);
+        const tabData1 = document.createElement("td");
+        tabRow.appendChild(tabData1);
+        const node1 = document.createTextNode(text1);
+        tabData1.appendChild(node1);   
+        const tabData2 = document.createElement("td");
+        tabRow.appendChild(tabData2);
+        const node2 = document.createTextNode(text2);
+        tabData2.appendChild(node2);   
+
+     } 
+     function random() {
+        var num = Math.floor(Math.random()*1000);
+        return num;
+     }
+
+     document.getElementById("btn-print").addEventListener("click",()=>window.print());
+     
+
+</script>
+
+</body>
+</html>
