@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+            <em>Rate Our website:-</em>
+        </p>
+        <form id="survey-form">
+            <label for="name" id="name-label" class="c">Name</label>
+            <input type="text" name="Name" id="name" placeholder="Omkar Vichare" maxlength="35" minlength="3" required>
+
+            <label for="email" id="email-label" class="c">Email</label>
+            <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
+            
+            <label for="number" id="number-label" class="c">Age</label>
+            <input type="number" name="age" id="number" min="15" max="80" placeholder="20" required>
+
+            <label for="role" id="role-label" class="c">
+                Which option best describe you?
+            </label>
+            <select name="role" id="dropdown" required>
+                <option disabled selected value="">--Select current role--</option>
+                <option value="Student">Student</option>
+                <option value="Intern">Intern</option>
+                <option value="Professional">Professional</option>
+                <option value="Professional">Prefer not to say</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="opinion" class="c">Would you like to recommed our website to you friends or not?</label>
+            <label>
+                <input type="radio" name="yn" id="yes" value="yes" checked>Definitely
+            </label>
+            <label>
+                <input type="radio" name="yn" id="no" value="no">May Be
+            </label>
+            <label>
+                <input type="radio" name="yn" id="not" value="not">Not Sure
+            </label>
+            
+            <label class="c">How often do you use our website ?</label>
+            <label>
+                <input type="radio" name="ask" value="Daily" checked>Daily
+            </label>
+            <label>
+                <input type="radio" name="ask" value="week">3-4 times with in a week.
+            </label>
+            <label>
+                <input type="radio" name="ask" value="weekly">Once a week
+            </label>
+            <label>
+                <input type="radio" name="ask" value="month">Once a Month
+            </label>
+            <label>
+                <input type="radio" name="ask" value="monthly">Monthly
+            </label>
+            <label>
+                <input type="radio" name="ask" value="never">Never use
+            </label>
+            
+            <label for="cb" class="c">From where do you know about our website?</label>
+            <label>
+                <input type="checkbox" value="Family" >Family
+            </label>
+            <label>
+                <input type="checkbox" value="Friends" >Friends
+            </label>
+            <label>
+                <input type="checkbox" value="Social-media" >Social-media
+            </label>
+            <label>
+                <input type="checkbox" value="scrolling" >By scrolling</input>
+            </label>
+            <label>
+                <input type="checkbox" value="Other" >Other
+            </label>
+
+            <label for="comment" class="c">Which improvements do you want in our website?</label>
+            <label>
+                <textarea name="comment" id="comment" cols="30" rows="6" placeholder="Enter your views here...."></textarea>
+            </label>
+
+            <button type="submit" value="submit" form="survey-form" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

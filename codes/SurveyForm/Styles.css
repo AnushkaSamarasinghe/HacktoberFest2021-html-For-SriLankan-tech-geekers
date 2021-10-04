@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffbbcc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-image: linear-gradient(
+      115deg,
+      rgba(21, 82, 68, 0.8),
+      rgba(45, 117, 117, 0.7)
+    ),
+    url(https://www.thelocal.se/wp-content/uploads/2020/04/7f4b0b19e152de3472f8b000cfe763a1828574ecb7b7dc812890d09938d21dea.jpg);
+    /* background-image: url(bg.jpg); */
+    background-size: cover;    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    line-height: 1.8rem;
+}
+#title{
+    text-transform: uppercase;
+    /* text-shadow: 5px 5px 25px #fff; */
+    color: #fff;
+}
+em{
+    color: white;
+}
+form{
+    /* background-color: #0a3538; */
+    background: rgba(13, 48, 45, 0.7);
+    border: 10px solid rgba(5, 90, 84, 0.6);
+    box-shadow: rgba(10, 53, 50, 0.6);
+    color: #fff;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+#survey-form{
+    text-align: left;
+    margin-bottom: 25px;
+}
+#survey-form  label{
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.c{
+    color: rgba(87, 211, 205, 0.897);
+}
+#survey-form input,
+#survey-form select,
+#survey-form textarea{
+    border-radius: 2px;
+    border: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 7px 1px 10px;
+    display: block;
+    margin: 0px 2px 15px;
+    font-size: 20px;
+    width: 95%;
+}
+
+#survey-form input[type="radio"],
+#survey-form input[type="checkbox"]{
+    display: inline-block;
+    width: auto;
+    margin-top: 12px;
+}
+
+#submit{
+    background-color: #336e6f;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 25px;
+    width: 95%;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 7px 1px 10px;
+}
