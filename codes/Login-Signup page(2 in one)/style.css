@@ -1,0 +1,246 @@
+body{
+    height: fit-content;
+    margin: 0;
+    background-color: black;
+}
+.header {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 2%;
+    position : sticky;
+    top:0;
+    justify-content: space-between;
+    display: flex;
+}
+.header h1{
+    margin: 0;
+}
+.header .icon{
+    width: 200px;
+    float: right;
+    
+}
+.header .icon i{
+    color:white;
+    font-size: 40px;
+    font-weight: 200;
+    top:0;
+    margin: 1%;
+    margin-left: 5%;
+    float: right;
+}
+.header .icon i:hover{
+    color: rgb(163, 215, 250);
+    transform: scale(1.2);
+}
+.container {
+    background-color: rgb(151, 149, 149);
+    display: flex;
+    margin: 0;
+    text-align: center;
+    height: max-content;
+    justify-content: space-around;
+}
+.container .flex .item  {
+    padding: 2%;
+    width: 300px;
+    font-size: 20px;
+    margin-right: 0%;
+    text-align: center;
+}
+.container .flex .item input{
+    width: 300px;
+    height: 25px;
+    
+    font-size: 20px;
+    margin-bottom: 15px;
+    border: black solid 1px;
+    border-radius: 3px;
+}
+.container .flex .item .line{
+    color: black;
+    display: flex;
+    text-align: center;
+    height:50px;
+    padding: 3%;
+    justify-content: space-around ;
+}
+.container .flex .item .line button{
+    width: 100px;
+    height: max-content;
+    font-size: 20px;
+    padding: 1%;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+.container .flex .item .line button:hover{
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 40px;
+    box-shadow: rgb(73, 72, 72) 3px 3px 3px 3px;
+    transform: translate(-4px,-10px);
+    animation-duration: 0.5s;
+}
+.container .flex .item a{
+    color: black;
+    border-radius: 5px;
+}
+.container .flex .item a:hover{
+    color: white;
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    box-shadow: rgb(73, 72, 72) 3px 3px 3px 3px;;
+}
+
+.container .flex .item .line2{
+    text-align: center;
+}
+.container .flex .item .line2 .popup{
+    text-align: center;
+    height:50px;
+    width: 350px;
+}
+.container .flex .item .line2 .popup:hover{
+    color: white;
+}
+.container .flex .item .line2 .popup:active{
+    color: white;
+    transform: translateY(-5px);
+}
+.container  .popup .popuptext{
+    background-color: #555;
+    border-radius: 5px;
+    padding: 1%;
+    height: auto;
+    cursor: pointer;
+    display: inline-flex;
+    position: inherit;
+    width:auto;
+    position:fixed; 
+}
+.popuptext > div {
+    background-color: rgb(151, 149, 149);
+    border-radius: 5px;
+    border:black 1px solid;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popuptext > div > div > button{
+    border-radius: 4px;
+    border: black solid 1px;
+    height: auto;
+    background-color: white;
+    height: max-content;
+    font-size: 15px;
+    padding: 5px;
+
+}
+.container .flex .item .line2 div .popup .popuptext .helper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.popuptext .popupCloseButton{
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #999;
+    color: white;
+    border: white 3px solid;
+}
+.footer {
+    background-color: black;
+    color: white;
+    margin:0px;
+    padding: 2%;
+    height: auto;
+}
+#submitbtn{
+    background-color: white;
+    color: black;
+    padding: 2.5% 3%;
+    border-radius: 5px;
+    transform: .5s;
+}
+#submitbtn:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.25);
+}
+@media(max-width:700px){
+    body{
+        width: fit-content;
+    }
+    header{
+        flex-flow: column;
+        
+        margin: 0%;
+    }
+    .container{
+        width: auto;
+        flex-flow: column;
+        margin: 0px;
+    }
+    .container .image {
+        width: auto;
+        margin:0px;
+    }
+    .container .image img{
+        width: 100%;
+        margin:0px;
+    }
+    .container .flex{
+        width: 90%;
+        margin: 0%;
+    }
+    .container .flex .item{
+        flex-flow: column;
+        width: auto;
+        margin-left: 0px;
+    }
+    .container .flex .item .input{
+        flex-flow: column;
+        width: auto;
+        margin-left: 0%;
+    }
+    .container .flex .item .input .line{
+        margin: 0%;
+        width: fit-content;
+        
+    }
+    .container .flex .item .input .line2{
+        width: fit-content;
+    }
+    .container .flex .item .input .line2 div{
+        
+        width: fit-content;
+    }
+    .footer{
+        width: auto;
+    }
+}
