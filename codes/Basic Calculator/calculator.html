@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="A Basic Calculator Made By Harshavardhan Bajoria" />
+		<meta name="viewport" content="width-device-width", initial-scale=1" >
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+		<title> Basic Calculator </title>
+	</head>
+	<body>
+		<p id="heading" ></p>
+		<script>
+			var i = 0;
+			var txt = 'Basic Calculator';
+			var speed = 50;
+			typeWriter();
+			function typeWriter(){
+			  if (i < txt.length) {
+				document.getElementById("heading").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			  }
+			  }
+			</script>
+		<br/>
+		<form id="myform" Name="calc">
+			<input name="display"  style="width:675px; height: 100px; text-align: right; background: rgb(251,248,235);background: linear-gradient(45deg, rgba(251,248,235,1) 16%, rgba(255,237,227,1) 40%, rgba(254,252,255,1) 66%, rgba(224,221,255,1) 86%); color: black;"><br/>
+			<input type=button value="0" Onclick="calc.display.value+='0'">
+			<input type=button value="1" Onclick="calc.display.value+='1'">
+			<input type=button value="2" Onclick="calc.display.value+='2'">
+			<input type=button value="+" style="background: rgb(136,12,142);background: linear-gradient(45deg, rgba(136,12,142,1) 16%, rgba(49,11,186,1) 40%, rgba(75,3,151,1) 63%, rgba(163,56,252,1) 87%);" Onclick="calc.display.value+='+'"><br/>
+			<input type=button value="3" Onclick="calc.display.value+='3'">
+			<input type=button value="4" Onclick="calc.display.value+='4'">
+			<input type=button value="5" Onclick="calc.display.value+='5'">
+			<input type=button value="-" style="background: rgb(34,193,195);background: linear-gradient(45deg, rgba(34,193,195,1) 14%, rgba(8,154,105,1) 47%, rgba(3,138,175,1) 93%);" Onclick="calc.display.value+='-'"><br/>
+			<input type=button value="6" Onclick="calc.display.value+='6'">
+			<input type=button value="7" Onclick="calc.display.value+='7'">
+			<input type=button value="8" Onclick="calc.display.value+='8'">
+			<input type=button value="x" style="background: rgb(158,24,208);background: linear-gradient(45deg, rgba(158,24,208,1) 20%, rgba(44,44,201,1) 57%, rgba(0,212,255,1) 100%);" Onclick="calc.display.value+='*'"><br/>
+			<input type=button value="9" Onclick="calc.display.value+='9'">
+			<input type=button value="C" style="background: rgb(253,64,64);background: linear-gradient(45deg, rgba(253,64,64,1) 29%, rgba(247,94,71,1) 53%, rgba(204,95,68,1) 71%, rgba(243,57,90,1) 89%);" Onclick="calc.display.value=''">
+			<input type=button value="=" style="background: rgb(31,195,85);background: linear-gradient(45deg, rgba(31,195,85,1) 19%, rgba(7,162,120,1) 43%, rgba(3,151,17,1) 66%, rgba(64,243,57,1) 89%);" Onclick="calc.display.value=eval(calc.display.value)">
+			<input type=button value="&#247; " style="background: rgb(228,187,14);background: linear-gradient(45deg, rgba(228,187,14,1) 16%, rgba(205,170,34,1) 40%, rgba(247,129,22,1) 64%, rgba(177,135,88,1) 86%);" Onclick="calc.display.value+='/'">
+		</form>
+	</body>
+</html>

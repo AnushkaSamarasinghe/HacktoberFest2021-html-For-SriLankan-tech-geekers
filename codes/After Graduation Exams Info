@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CareerGuidance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body class="grad">
+    <div class="jumbotron">
+        <h1 class="display-7">GATE</h1>
+        <p class="lead">GATE exam (Graduate Aptitude Test in Engineering) is a computer-based standardized test conducted at the national level in India with an aim to examine the understanding of various engineering and science undergraduate subjects. </p>
+        <hr class="my-4">
+        <p>GATE exam results are also used by some of the Public Sector Undertakings (PSUs) for their recruitment and by several other universities in India and abroad for admissions. Some of the PSU Companies and research organizations that use the GATE exam results for providing jobs include ONGC, NTPC, GAIL, HPCL, PGCIL, BHEL, BSNL, HPCL, NHPC, BARC, DRDO, and more.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="http://gate.iitd.ac.in/" role="button">Learn more</a>
+        </p>
+    </div>
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-7">GRE</h1>
+        <p class="lead">The Graduate Record Examinations (GRE) is a standardized test that is an admissions requirement for many graduate schools in the United States and Canada. The GRE is owned and administered by Educational Testing Service (ETS). The test was established in 1936 by the Carnegie Foundation for the Advancement of Teaching.</p>
+        <hr class="my-4">
+        <p>More than 1,200 business schools around the world accept the GRE scores, including top-ranked MBA programs according to The Financial Times, U.S. News & World Report, and Bloomberg Businessweek along with a handful of US law schools accept GRE scores. </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="https://www.ets.org/gre" role="button">Learn more</a>
+        </p>
+    </div>
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-7">UPSC</h1>
+        <p class="lead">The Union Public Service Commission, commonly abbreviated as UPSC, is India's premier central recruiting agency for public servants.</p>
+        <hr class="my-4">
+        <p>It is responsible for appointments to and examinations for All India services and group A & group B posts under civil services cadre and defence services cadre of central government . While Department of Personnel and Training is the central personnel agency in India.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="https://www.upsc.gov.in/" role="button">Learn more</a>
+        </p>
+    </div>
+</body>
+</html>

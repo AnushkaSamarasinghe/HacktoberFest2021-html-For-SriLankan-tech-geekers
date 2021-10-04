@@ -1,0 +1,213 @@
+.infinity-container
+{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	min-height:100vh;
+	color:#000;
+	background:url('image/bg3.jpg') center no-repeat;
+	background-size:cover;
+}
+
+.infinity-form-block
+{
+	width:350px;
+	border-radius:5px;
+	box-sizing:border-box;
+	overflow:hidden;
+}
+
+.infinity-click-box
+{
+	height:50px;
+	background-color:#ff8333;
+	color:#fff;
+	line-height:50px;
+	font-size:20px;
+	box-shadow:0 5px 10px rgba(0,0,0,.5);
+}
+
+.infinity-fold
+{
+	position:relative;
+	width:100%;
+	background:rgba(255,188,102,.5);
+	padding:30px 20px;
+}
+
+.infinity-form .text-sm
+{
+	font-size:14px;
+}
+
+.infinity-form .form-input
+{
+	position:relative;
+}
+
+.infinity-form .form-input input
+{
+	width:100%;
+	margin-bottom:20px;
+	height:40px;
+	border:2px solid #fff;
+	border-radius:20px;
+	outline:none;
+	background:transparent;
+	padding-left:45px;
+}
+
+.infinity-form .form-input span
+{
+	position:absolute;
+	top:8px;
+	padding-left:20px;
+	color:#777;
+}
+
+.infinity-form .form-input input:focus,.infinity-form .form-input input:valid
+{
+	border:2px solid #ff8333;
+}
+
+.infinity-form .form-input input:focus::placeholder
+{
+	color:#454b69;
+}
+
+.infinity-form input[type="checkbox"]:not(:checked) + label:before
+{
+	background:transparent;
+	border:2px solid #fff;
+	width:15px;
+	height:15px;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before
+{
+	background-color:#ff8333!important;
+	border:0;
+	width:15px;
+	height:15px;
+}
+
+.infinity-form button[type="submit"]
+{
+	margin-top:10px;
+	border:none;
+	cursor:pointer;
+	width:150px;
+	height:40px;
+	border-radius:5px;
+	background:#ff8333;
+	color:#fff;
+	font-weight:700;
+	transition:.5s;
+	margin-bottom:10px;
+}
+
+.infinity-form button[type="submit"]:hover
+{
+	background:#ff741a;
+	-webkit-box-shadow:0 9px 10px -2px rgba(0,0,0,0.55);
+	-moz-box-shadow:0 9px 10px -2px rgba(0,0,0,0.55);
+	box-shadow:0 9px 10px -2px rgba(0,0,0,0.55);
+}
+
+.forget-link,.login-link,.register-link
+{
+	color:#000;
+	font-weight:700;
+}
+
+.forget-link:hover,.login-link:hover,.register-link:hover
+{
+	color:#ff8333;
+}
+
+.infinity-social-btn ul
+{
+	display:flex;
+}
+
+.infinity-social-btn ul li
+{
+	position:relative;
+	list-style:none;
+	width:50px;
+	height:50px;
+	top:10px;
+	left:20px;
+	align-items:center;
+	margin-right:20px;
+	background:#fff;
+	text-align:center;
+	border:4px solid transparent;
+	box-sizing:border-box;
+	border-radius:50%;
+	transition:.5s;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+
+.infinity-social-btn ul li .facebook .fa
+{
+	color:#3b5999;
+}
+
+.infinity-social-btn ul li .google .fa
+{
+	color:#dd4b39;
+}
+
+.infinity-social-btn ul li .twitter .fa
+{
+	color:#3cf;
+}
+
+.infinity-social-btn ul li:hover:nth-child(1)
+{
+	background-color:#3b5999;
+}
+
+.infinity-social-btn ul li:hover:nth-child(2)
+{
+	background-color:#dd4b39;
+}
+
+.infinity-social-btn ul li:hover:nth-child(3)
+{
+	background-color:#55acee;
+}
+
+.infinity-social-btn ul li .fa
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-size:24px;
+	color:#2196f3;
+	transition:.5s;
+}
+
+.infinity-social-btn ul li .fa:nth-child(1)
+{
+	left:-50%;
+	opacity:0;
+}
+
+.infinity-social-btn ul li:hover .fa:nth-child(1)
+{	
+	left:50%;
+	opacity:1;
+	color:#fff;
+}
+
+.infinity-social-btn ul li:hover .fa:nth-child(2)
+{
+	left:150%;
+	opacity:0;
+}
+

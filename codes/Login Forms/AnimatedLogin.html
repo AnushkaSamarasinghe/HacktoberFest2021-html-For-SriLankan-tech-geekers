@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated form</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main_div{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .box{
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+        .box h1{
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .inputbox{
+            position: relative;
+        }
+        .inputbox input{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+        }
+        .inputbox label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            transition: 0.5s;
+        }
+        .inputbox input:focus ~ label,
+        .inputbox input:valid ~ label{
+            top: -20px;
+            left: 0px;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+        #subbtn{
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: #03a9f4;
+            padding: 8px 16px;
+            border: 5px;
+            font-size: 15px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <div class="box">
+            <h1>LogIn form</h1>
+            <form action="#" method="post">
+                <div class="inputbox">
+                    <input type="text" name="uname" id="uname" autocomplete="off" required>
+                    <label for="uname">Username</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="pass" id="pass" autocomplete="off" required>
+                    <label for="pass">Password</label>
+                </div>
+                <input type="submit" value="Login" id="subbtn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
