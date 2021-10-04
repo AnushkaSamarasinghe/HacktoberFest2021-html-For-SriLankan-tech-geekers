@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+    <head>
+
+
+	    <style>
+		    #g2{
+			    transform:rotate(0deg);
+			    transition-property:all;
+		        transition-duration:6s;
+					
+			    
+			}
+		    
+
+		    #g2:hover{  
+		                background-color:red;
+						transform:rotate(360deg);
+						
+		    }
+			#g3{
+			    transform:rotate(0deg);
+			    transition-property:all;
+		        transition-duration:6s;
+			}
+		    #g3:hover{
+		                background-color:red;
+						transform:rotate(360deg);
+						color:red;
+		    }
+		    #d1{
+				    transform:rotate3d(1,1,1,0deg);
+				    transition-property:all;
+				    transition-duration:6s;
+		    }
+		    #d1:hover{
+		            
+					transform:rotate3d(1,1,1,360deg);
+		    }
+		    #d2{
+		
+				transform:rotate3d(1,1,1,0deg);
+				transition-property:all;
+				transition-duration:6s;
+		    }
+		    #d2:hover{
+					    transform:rotate3d(1,1,1,360deg);
+		    }
+		    #g1{
+		            transform:rotate(0deg);
+			        transition-property:all;
+		            transition-duration:6s;
+					
+			}
+		    #g1:hover{ 
+			            background-color:red;
+					    transform:rotate(360deg);
+		    }
+			
+			.f1{
+			    border-color:pink;
+				border-radius:10px;
+			}
+			.f2:hover{
+			            color:red;
+			}
+			
+			.f3:hover{
+			    color:green;
+			}
+			#f5{
+			    transform:rotate(0deg);
+			    transition-property:all;
+		        transition-duration:6s;
+			}
+			#f5:hover{
+			            transform:rotate(360deg);
+						background-color:orange;
+			}
+			.f6{
+			    transform:translate(0, 0);
+			    transition-property:all;
+		        transition-duration:6s;    
+			}
+			.f6:hover{
+			            transform:translate(10, 20px);
+						color:cyan;
+			}
+			#f7{
+			    transform:rotate(0deg);
+			    transition-property:all;
+		        transition-duration:6s;
+			}
+			#f7:hover{
+			            background-color:cyan;
+						border-color:red;
+						transform:rotate(360deg);
+			}
+		   
+		</style>
+		<script>
+                var name = prompt("Enter your name");
+                if(name.length > 0 && name != "null") {
+                    document.write("Hi, " + name);
+                } else {
+                    document.write("Anonymous!");
+                }
+				
+				
+				var email = prompt("Enter your email");
+                if(email.length > 0 && email != "null") {
+                    document.write();
+                } else {
+                    document.write("Anonymous!");
+                }
+				function def(){
+				var reset=confirm("Are you sure to reset all data???");
+				if (reset==true)
+				alert(ok);
+				else
+				alert(cancel);
+				}
+				function f(){
+				    var Home=confirm("Any Information regarding admission form")
+					if (Home==true)
+					document.write("Contact us:9068789680 <br><br>  Email- chitkara.edu.in");
+					else
+					document.write("Cancel!!!!!!");
+					
+				}
+				
+        </script>
+		
+		
+		
+	</head>
+	<body>
+	    
+		<br><br>
+	    <form>
+		<fieldset style="border:10px dashed purple">
+		    <legend  id="d2" align="center" style="font-style:italic;font-size:100px;text-shadow:4px 5px 5px yellow;color:red">ADMISSION CRITERIA</legend>
+		    <table Cellpadding="10">
+		        <tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Name:</h3></td>
+				    <td><input type="text" placeholder="Enter your name" max="10" style="font-size:20px;color:blue;" class="f1" required>(Max 10 Characters are Allowed)</td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Last Name:</h3></td>
+				    <td><input type="text" disabled style="font-size:20px;color:blue" class="f1"></td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Roll No:</h3></td>
+				    <td><input type="Number" placeholder="Enter your Roll Number" style="font-size:20px;color:blue" class="f1" required>(Max 10 Numbers are Allowed)</td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>EMAIL-ID</h3></td>
+				    <td><input type="EMAIL-ID" placeholder="Enter your EMAIL-ID" style="font-size:20px;color:blue" class="f1" required></td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Phone Number:</h3></td>
+				    <td><input type="Number" placeholder="Enter your Phone Number" style="font-size:20px;color:blue" class="f1" required>(Max 10 Numbers are Allowed)</td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>D.O.B:</h3></td>
+				    <td><input type="Date" placeholder="Enter your D.O.B" style="font-size:20px;color:blue" class="f1" required></td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Gender:</h3></td>
+				    <td>Male: <input type="radio" name="a1" value="Male" style="font-size:20px;color:blue">
+					    Female: <input type="radio" name="a1" value="Female" style="font-size:20px;color:blue">
+					    Others: <input type="radio" name="a1" value="Others" style="font-size:20px;color:blue"></td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Hobies</h3></td>
+				    <td>Dancing: <input type="Checkbox" name="n1" value="Dancing" style="font-size:20px;color:blue">
+					    Singing: <input type="Checkbox" name="n2" value="Singing" style="font-size:20px;color:blue">
+						Sports: <input type="Checkbox" name="n3" value="Sports" style="font-size:20px;color:blue">
+						Drawing/Painting: <input type="Checkbox" name="n4" value="Drawing/Painting" style="font-size:20px;color:blue">
+						Reading Books: <input type="Checkbox" name="n5" value="Reading Books" style="font-size:20px;color:blue">
+						Others: <input type="Checkbox" name="n6" value="Others" style="font-size:20px;color:blue"></td>
+			    </tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Courses</h3></td>
+				    <td>
+					    <select>
+						    <optgroup Label="B-tech">
+							    <option selected>Cse</option>
+								<option>Civil</option>
+								<option>Mechanical</option>
+								<option>Electrical</option>
+								<option>Masters</option>
+							</optgroup>
+							<optgroup Label="Medical">
+							    <option>Nursing</option>
+								<option>B-pharam</option>
+								<option>D-pharam</option>
+								<option>Master in chemistery</option>
+							</optgroup>
+							<option>Master in physics</option>
+						    <option>M-Tech</option>
+						    <option>Diploma certification</option>
+						    <option>Others</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+			        <td style="text-shadow:4px 5px 5px yellow;font-size:20px" class="f2"><h3>Comment:</h3></td>
+				    <td><textarea name="Note" rows="10" cols="10" style= "resize:none;overflow:scroll;" class="f1" required></textarea></td>
+			    </tr>	
+		    </table>
+		
+		<table cellpadding=10>
+		    <tr>
+			    <td id="g1"><input type="button" value="Submit" onclick="alert('Congratulations Your response as been Recorded')" style="font-size:30px;color:black;text-shadow:4px 5px 5px yellow"></td>
+
+			    <td id="g2"><input type="reset" value="Reset" onclick="def()" style="font-size:30px;color:black;text-shadow:4px 5px 5px yellow"></td>
+				
+				
+				
+				<td id="g3"><input type="button" value="For More Information" onclick="alert('I Am Useless')" style="font-size:30px;color:black;text-shadow:4px 5px 5px yellow"></td>
+			</tr>
+		</table>
+        </form>
+		<br>
+		<br>
+		<h1 align="center" style="font-size:80px;color:red;text-shadow:4px 4px 5px yellow;outline:10px dotted red;outline-offset:-4px" id="f5">Join Us!!!!!!!!</h1>
+		<a href="http://www.google.com" style="font-size:50px;text-shadow:4px 4px 5px yellow;" class="f3">Google</a>
+		<br>
+		<a href="http://www.twiter.com" style="font-size:50px;text-shadow:4px 4px 5px yellow;letter-spacing:5px;" class="f3">Twitter</a>
+		<br>
+		<a href="http://www.facebook.com" style="font-size:50px;text-shadow:4px 4px 5px yellow;letter-spacing:5px" class="f3">facebook</a>
+		<br>
+		<a href="http://www.linkedin.com" style="font-size:50px;text-shadow:4px 4px 5px yellow;letter-spacing:5px" class="f3">linkedin</a>
+	    <br>
+		<br>
+		<article align="left">
+		    <address align="right" style="font-size:30px;font-family:italic;color:orange;"><p class="f6">Chitkara university admission form</p>
+			</address>
+		</article>
+		<br>
+		<br>
+		<center><input type="button" title="click me" onclick="f()" value="Home" style="font-size:50px;color:orange;text-shadow:4px 4px 5px yellow;" id="f7"></input></center>
+	    <br>
+		</fieldset>
+	</body>
+</html>
