@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>traveling_monk_7</title>
+    <link rel="shortcut icon" href="../image/yin.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fdd8d8dd49.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="lottie.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="side nav/side.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <header class="container">
+      <nav>
+        <span><i class="fas fa-yin-yang"></i>Travelling Monk</span>
+        <div style="margin-left: 1em; z-index: 5">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <a href="https://lonewolf2002.github.io/">About</a>
+            <a href="https://www.instagram.com/traveling_monk_7/">Instagram</a>
+            <a href="https://www.linkedin.com/in/gyana-ranjan-panda-6210b619b/"
+              >Linkedin</a
+            >
+            <a href="https://github.com/lonewolf2002">Github</a>
+            <h6 style="color: black; margin-left: 5em; margin-top: 7em">
+              Made by Gyana
+            </h6>
+          </div>
+
+          <!-- Use any element to open the sidenav -->
+          <span onclick="openNav()"><i class="fas fa-bars "></i></span>
+        </div>
+      </nav>
+
+      <section id="about">
+        <h1 style="color: white; ">Hello,I'm a Full Stack developer</h1>
+      </section>
+      <div class="bio" style="z-index: 4">
+        <span style="color: white" class="animate"></span>
+        <div>
+          <a href="https://www.instagram.com/traveling_monk_7/">EXPLORE</a>
+        </div>
+      </div>
+      <section id="code">
+        <div id="codingAnimation"></div>
+        <script src="coding.js"></script>
+      </section>
+     
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.0/pathseg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.29.2/dist/tsparticles.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="typed.js"></script>
+    <script>
+      var typed = new Typed(".animate", {
+        strings: ["+ Tall boy with a deep voice and messy hair xd"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="side nav/side.js"></script>
+  </body>
+</html>
