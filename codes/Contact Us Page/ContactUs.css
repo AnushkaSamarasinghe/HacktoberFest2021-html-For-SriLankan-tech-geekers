@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact {
+    background-color: black;
+    height: auto;
+    color: white;
+    padding: 60.3px;
+}
+
+.contact-contain {
+    display: inline-block;
+    margin-left: 400px;
+    align-items: center;
+    height: auto;
+    padding: 32px;
+    background-color: #111111;
+}
+
+.contact-container img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 16px;
+    filter: invert(1);
+}
+
+.contact-container h1 {
+    color: #8DC424;
+    font-family: 'Playfair Display SC', serif;
+    margin-bottom: 16px;
+}
+
+.contact-container p {
+    margin-bottom: 16px;
+}
+/* Form Box  */
+
+.contact-form {
+    display: flex;
+}
+
+.contact-form-items {
+    padding: 16px 12px;
+    text-align: center;
+    width: 500px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+#button {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #5c8018;
+    color: white;
+    font-size: 18px;
+    width: 110px;
+    height: 45px;
+}
+
+#button:hover {
+    background-color: #8DC424;
+}
