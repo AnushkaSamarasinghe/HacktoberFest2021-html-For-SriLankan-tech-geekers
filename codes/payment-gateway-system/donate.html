@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Gateway</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/a70249e646.js" crossorigin="anonymous"></script>
+
+    <style>
+        .nav-item{
+            margin: 10px;
+        }
+        body{
+            background-color: lemonchiffon;
+            overflow: hidden;
+            font-size: 18px;
+        }
+        .container-vg{
+            background-color: white;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+            margin-right: 220px;
+            margin-left: 100px;
+        }
+        .navbar-brand:hover {
+    transform: scale(1.1);
+  }
+.nav-link:hover {
+    transform: scale(1.1);
+  }
+
+.btn:hover {
+    transform: scale(1.1);
+  }
+        .navbar
+  {
+    font-size: 1.3rem;
+  }
+  .navbar-brand
+  {
+      font-size: 1.8rem;
+  }
+    </style>
+       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top pr-5">
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="https://www.thesparksfoundationsingapore.org/images/logo_small.png"
+          width="50"
+          height="30"
+          class="d-inline-block align-top ml-4"
+          style="
+            padding: 5px;
+            height: 100%;
+            float: left;
+            background: linear-gradient(
+              to top,
+              rgba(254, 254, 254, 0.4),
+              rgba(250, 250, 250, 0)
+            ); ;
+          "
+        />
+      </a>
+      <a href="index.html" style="text-decoration: none"
+        ><h3 class="text-warning">The Sparks Foundation</h3></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="donate.html">Donate</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/donate.jfif" style="margin-top: 150px;margin-left: 150px;">
+          </div>
+          <div class="col-lg-6" style="margin-top: 150px;">
+            <div class="container-vg">
+            <form>
+            <h3 style="text-align: center;padding-top: 20px;">Donate 💰</h3>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><i style="color: #D56613;" class="fas fa-lg fa-building"></i> Company Name:</label>
+                    <input type="text" class="form-control col-md-12" id="exampleInputPassword2" placeholder="The Sparks Foundation" disabled="true" style="background-color: lightblue;">
+                  </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><i style="color: #D56613;" class="fas fa-lg fa-code"></i> Done By:</label>
+                    <input type="text" class="form-control col-md-12" id="exampleInputPassword2" placeholder="Vivek Gonal" disabled="true" style="background-color: lightblue;">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"><i style="color: #D56613;" class="fa fa-lg fa-envelope"></i> Email address:</label>
+                  <input type="email" class="form-control col-md-12" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="gonalvivek7@gmail.com" disabled="true"style="background-color: lightblue;">
+                </div>
+              
+                  <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HmJQDnfYvk57cp" async> </script> </form>
+              
+            </form>
+        </div>
+            </div>
+          </div>
+        </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>
