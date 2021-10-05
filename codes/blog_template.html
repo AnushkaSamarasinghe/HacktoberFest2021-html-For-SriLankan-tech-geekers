@@ -1,0 +1,91 @@
+<!-- Joel C -->
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <style>
+        header {
+            text-align: center;
+            background: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_960_720.png');
+            background-size: cover;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        img {
+            margin: 40px 0px 0px 0px;
+            border: 7px solid white;
+            border-radius: 20px;
+            height: 200px;
+        }
+
+        ul {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        li {
+            display: inline;
+            padding: 0px 10px 0px 10px;
+        }
+
+        article {
+            max-width: 750px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 36px;
+                padding: 5px;
+            }
+
+            li {
+                padding: 5px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+        <h1>My Blog</h1>
+        <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Interests</a></li>
+        </ul>
+    </header>
+    <article>
+        <h2>Article 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis harum obcaecati quisquam, reprehenderit consectetur magnam ipsum! Blanditiis saepe, soluta est aut laudantium et similique consequatur nihil ex eaque sit deserunt!</p>
+        <button class='btn btn-default'>Like</button>
+    </article>
+    <article>
+        <h2>Article 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur tempora, quos, ipsa molestias cumque iste labore earum nostrum odio dolorem et officiis vero minus magni porro consequuntur inventore corrupti. Reprehenderit?</p>
+        <button class='btn btn-default'>Like</button>
+    </article>
+    <article>
+        <h2>Aritcle 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum exercitationem amet quibusdam quis dolore doloribus eveniet reiciendis optio excepturi! Deserunt maiores, veritatis cupiditate dicta sint architecto nisi laudantium alias odit?</p>
+        <button class='btn btn-default'>Like</button>
+    </article>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $("button").on("click", function () {
+            $(this).css('color','red');
+        });
+    </script>
+</body>
