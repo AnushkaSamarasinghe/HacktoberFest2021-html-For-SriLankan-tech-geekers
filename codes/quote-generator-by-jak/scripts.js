@@ -1,3 +1,5 @@
+// By Jonak Adipta Kalita
+
 const dex = document.getElementById("dex");
 
 const fetchData = async () => {
