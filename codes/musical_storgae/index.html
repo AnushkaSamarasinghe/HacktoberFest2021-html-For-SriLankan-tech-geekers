@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>MUSICAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+           
+             <h2>MUZZIICC!!!</h2>
+
+        </div>
+        <div class="content">
+           
+                <!-- <p>click here to listen</p> -->
+               <img src="play.jpg"   id="icon">
+          
+        </div>
+    </div>
+    <audio id="mysong">
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var  song= document.getElementById("mysong");
+        var  icon= document.getElementById("icon");
+        icon.onclick = function(){
+              if(song.paused){
+                  song.play();
+                  icon.src="pause-button.png";
+              }
+              else{
+                  song.pause();
+                  icon.src="play.jpg";
+              }
+        }
+    </script>
+</body>
+</html>
