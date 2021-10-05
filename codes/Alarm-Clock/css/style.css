@@ -1,0 +1,39 @@
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+   
+}
+
+.img{
+ height: 40vw;
+ width: 40vw;
+}
+#hr,#min,#sec{
+    background: black;
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#hr{
+    width: 1%;
+    height: 30%;
+    top:20%;
+}
+#min{
+    width: 0.6%;
+    height: 34%;
+    top: 16%;
+}
+#sec{
+    width: 0.3%;
+    height: 38%;
+    top: 13%;
+}
+#addcard{
+    display: flex;
+    flex-direction: row;
+}
