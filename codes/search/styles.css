@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+}
+
+div {
+  text-decoration: none;
+  justify-content: center;
+  text-align: right;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  align-items: center;
+  /* padding-right: 100px; */
+}
+
+form {
+  /* align-items: center; */
+  text-align: center;
+}
+
+form > input {
+  text-align: center;
+}
+
+#null {
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  /* display: block; */
+  /* padding-bottom: 5px; */
+  /* padding-left: 500px; */
+  /* margin-left: 550px; */
+  margin-bottom: 10px;
+}
+
+#not {
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* #container > input {
+  display: block;
+  text-align: center;
+  align-items: center;
+} */
