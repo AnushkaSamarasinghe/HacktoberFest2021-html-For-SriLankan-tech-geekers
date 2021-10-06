@@ -1,0 +1,249 @@
+body {
+  text-align: center;
+  margin: 80px auto 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background:crimson;
+}
+
+.emoji {
+  width: 120px;
+  height: 120px;
+  margin: 15px 15px 40px;
+  background: #ffda6a;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}
+.emoji:after {
+  position: absolute;
+  bottom: -40px;
+  font-size: 18px;
+  width: 60px;
+  left: calc(50% - 30px);
+  color: #8a8a8a;
+}
+
+.emoji__face,
+.emoji__eyes,
+.emoji__mouth,
+.emoji__tongue
+{
+  position: absolute;
+}
+.emoji_face:before, .emoji_face:after,
+.emoji__eyes:before,
+.emoji__eyes:after,
+.emoji__mouth:before,
+.emoji__mouth:after,
+.emoji__tongue:before,
+.emoji__tongue:after
+ {
+  position: absolute;
+  content: "";
+}
+
+.emoji__face {
+  width: inherit;
+  height: inherit;
+}
+.emoji--haha:after {
+  content: "";
+}
+.emoji--haha .emoji__face {
+  -webkit-animation: haha-face 2s linear infinite;
+          animation: haha-face 2s linear infinite;
+}
+.emoji--haha .emoji__eyes {
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  left: calc(50% - 13px);
+  top: 35px;
+  transform: rotate(20deg);
+  background: transparent;
+  box-shadow: -25px 5px 0 0 #000000, 25px -5px 0 0 #000000;
+}
+.emoji--haha .emoji__eyes:after {
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  transform: rotate(-40deg);
+  background: transparent;
+  box-shadow: -25px -5px 0 0 #000000, 25px 5px 0 0 #000000;
+}
+.emoji--haha .emoji__mouth {
+  width: 80px;
+  height: 40px;
+  left: calc(50% - 40px);
+  top: 50%;
+  background: #000000;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-animation: haha-mouth 2s linear infinite;
+          animation: haha-mouth 2s linear infinite;
+}
+.emoji--haha .emoji__tongue {
+  width: 70px;
+  height: 30px;
+  background: #f55064;
+  left: calc(50% - 35px);
+  bottom: -10px;
+  border-radius: 50%;
+}
+@-webkit-keyframes haha-face {
+  10% {
+    transform: translateY(25px);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  30% {
+    transform: translateY(25px);
+  }
+  40% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes haha-face {
+  10% {
+    transform: translateY(25px);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  30% {
+    transform: translateY(25px);
+  }
+  40% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes haha-mouth {
+  10% {
+    transform: scale(0.6);
+    top: 45%;
+  }
+  20% {
+    transform: scale(0.8);
+    top: 45%;
+  }
+  30% {
+    transform: scale(0.6);
+    top: 45%;
+  }
+  40% {
+    transform: scale(0.8);
+    top: 45%;
+  }
+  50% {
+    transform: scale(0.6);
+    top: 45%;
+  }
+  60% {
+    transform: scale(1);
+    top: 50%;
+  }
+  70% {
+    transform: scale(1.2);
+    top: 50%;
+  }
+  80% {
+    transform: scale(1);
+    top: 50%;
+  }
+  90% {
+    transform: scale(1.1);
+    top: 50%;
+  }
+}
+@keyframes haha-mouth {
+  10% {
+    transform: scale(0.6);
+    top: 45%;
+  }
+  20% {
+    transform: scale(0.8);
+    top: 45%;
+  }
+  30% {
+    transform: scale(0.6);
+    top: 45%;
+  }
+  40% {
+    transform: scale(0.8);
+    top: 45%;
+  }
+  50% {
+    transform: scale(0.6);
+    top: 45%;
+  }
+  60% {
+    transform: scale(1);
+    top: 50%;
+  }
+  70% {
+    transform: scale(1.2);
+    top: 50%;
+  }
+  80% {
+    transform: scale(1);
+    top: 50%;
+  }
+  90% {
+    transform: scale(1.1);
+    top: 50%;
+  }
+}
+.github-link{
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    -webkit-box-shadow: 20px 20px 25px rgba(0,0,0, 0.2);
+            box-shadow: 10px 10px 15px blue;
+}
