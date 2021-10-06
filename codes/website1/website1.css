@@ -1,0 +1,92 @@
+/*Harshita Singh*/
+body{
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0px;
+    padding: 0px;
+    background: url('images/close-up-couple-doing-crossfit-workout.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+}
+.left{
+    display: inline-block;
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    /*border: 2px solid red;*/
+    text-align: center;
+    line-height: 18px;
+    font-size: 20px;
+}
+.left img{
+    width: 80px;
+    filter: invert(100%);
+}
+.center{
+    display: block;
+    width: 36%;
+    margin: 20px auto;
+    /*border: 2px solid wheat*/;
+}
+.right{
+    position: absolute;
+    right: 34px;
+    top: 20px;
+    display: inline-block;
+}
+.navbar{
+    display: inline-block;
+    width: 2000px;
+}
+.navbar li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    padding: 34px 23px;
+}
+.navbar li a:hover, .navbar li a:active{
+    text-decoration: underline;
+    color: grey;
+}
+.btn{
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: grey;
+}
+.container{
+    /*border: 2px solid white;*/
+    margin: 40px 80px;
+    padding: 75px;
+    width: 33%;
+    border-radius: 20px;
+}
+.form-group input{
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 11px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+.container h1{
+    text-align: center;
+}
+.form-group button{
+    display: block;
+    width: 23%;
+    margin: auto;
+}
