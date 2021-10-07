@@ -1,0 +1,66 @@
+/*====================== Applying black color to background of navbar =====================*/
+
+.navbar-custom{
+    background-color:black;
+}
+
+/*======================= Applying Hover to Contact me ====================================*/
+#contactMe:hover{
+    color:black;
+}
+
+/*======================= Centering the Grids =============================================*/
+.centerGrid{
+    
+     float:none;
+     margin-left:auto;
+     margin-right:auto;
+
+}
+
+/*======================= Applying the style to THE BAND =================================*/
+        #h1below{
+            text-align:center;
+            font:400 20px arial;
+            
+        }
+
+/*======================= Applying the style to we love music ============================*/
+#para1{
+    font-style:italic;
+    text-align:center;
+    color:grey;
+    font-size:15px;
+}
+
+/*======================= Applying style to main paragraph ============================= */
+
+#mainpara{
+    text-align:justify;
+    font-family:arial;
+    font-size:15px;
+
+}
+
+/* Applying background color black to everything below images */
+.black{
+    background-color:black
+}
+
+/* Applying background color white to table */
+#white{
+    background-color:white;
+}
+
+.grey{
+    color:grey;
+}
+/* This styling is for text 'sold out'  */
+span {
+    background-color:red;
+    color:white;
+}
+
+/*
+code by SHEHROZ IRFAN
+*/
