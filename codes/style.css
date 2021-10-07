@@ -1,0 +1,154 @@
+
+:root{
+    --primary-color:#1b1f1c;
+    --secondary-color:#3e473f;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color:  var(--primary-color) ;
+    
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+    margin: 0.5px;
+    position: relative;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    border-radius: 30%;
+    padding: 9px 5px;
+    border: 30% white;
+    position: absolute;
+    left: 0;
+    top: auto;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.el{
+    padding: 0 10px;
+    cursor: pointer;
+    margin: 1px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 0;
+
+}
+.el:active{
+    background-color: rgb(70, 79, 77);
+    transform: scale(0.98);
+}
+
+.search{
+    background-color: transparent; 
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+
+}
+
+.search::placeholder{
+    color: rgb(1, 2, 2);
+}
+
+.search:focus{
+outline: none;
+background-color: var(--primary-color);
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    width: 300px;
+    margin: 1rem;
+    background-color:rgba(0, 0, 0, 0.918);
+    box-shadow: 0 4px 5px rgba(51, 37, 37, 0.438);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: papayawhip;
+    display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0.5rem 1rem 1rem;
+     letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem, 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.orange {
+    color:orange; 
+}
+
+.movie-info span.green {
+    color: lightgreen; 
+}
+
+.movie-info span.red {
+    color: red ; 
+}
+
+.overview {
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.cp-text{ 
+     color: rgba(0,0,0,.7);
+     text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+     background:var(--secondary-color); 
+     text-align: center;
+     padding:5%;
+     font-size: 1.2rem;
+    }
+
+
