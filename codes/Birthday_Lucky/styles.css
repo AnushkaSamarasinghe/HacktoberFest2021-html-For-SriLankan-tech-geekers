@@ -1,0 +1,81 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Merriweather+Sans:wght@400;500;700&family=Overpass&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap'); */
+body{
+  text-align: center;
+  margin: auto;
+  /* font-family: 'Rampart One', cursive; */
+
+  /* background-color: #370617; */
+
+  background-color: #faa307;
+  /* font-family: 'Merriweather Sans', sans-serif; */
+  /* font-family: 'Fira Sans', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Overpass', sans-serif; */
+}
+label
+{
+  display: block;
+}
+button
+{
+  display: block;
+margin: auto;
+}
+h1
+{
+  background-color: #370617;
+  margin: auto;
+  height:9rem;
+  padding: auto;
+  color: white;
+  font-family: 'Rampart One', cursive;
+  font-size: 4rem;
+  padding-top: 2rem;
+}
+  /* background-color: #faa307; */
+
+
+
+input
+{
+  /* font-family: 'Rampart One', cursive; */
+
+  width:17rem;
+  height:3rem;
+  font-size: 2rem;
+  /* padding: 2rem; */
+text-align: center;
+}
+label
+{
+  font-family: 'Rampart One', cursive;
+
+font-size: 3rem;
+padding: 2rem;
+}
+#btn
+{
+  font-size: 2rem;
+  width:12rem;
+  height:3rem;
+  background-color: #d00000;
+  /* border-left-color: black;
+  border-top-color: black; */
+border-color: black;
+  /* padding: 2rem; */
+  text-align: center;
+margin: 2rem auto;
+border-radius:20px;
+}
+#outputBox
+{
+  font-size: 2rem;
+}
+#btn:hover
+{
+
+  background-color:#fdf0d5;
+}
