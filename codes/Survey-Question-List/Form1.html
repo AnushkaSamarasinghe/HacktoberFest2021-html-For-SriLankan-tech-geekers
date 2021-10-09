@@ -1,0 +1,257 @@
+<!-- Created by Tashini Somarathne -->
+
+<!doctype html>
+<html lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<head>
+	<script type="text/javascript" src="control.js"></script>
+</head>
+
+<body>
+    <form id="regForm" action="action.php" method="POST">
+        <h2>THE INTAKE SURVEY QUESTION LIST</h2>
+            <div class="tab">
+                <p>Hi there - we're all excited to start working with you and your team!</p>
+                <p>Before we can start work though, we need to grab a few details to get set your business
+                    setup in our systems so our team can start helping you out..</p>
+                <p>This short intake process will only take a few minutes minutes, so grab yourself a coffee (or
+                    green smoothie ) and let's dive in.</p>
+                <p>Regards,</p>
+                <p>Clive Sanham (Founder & CEO)</p>
+            </div>
+
+            <div class="tab">
+                <label>First up, what’s your first name?</label>   
+                <input type="text" name="FirstName" id="first" onchange="fName(this)">
+                
+                <label>Great
+                <span name="CopyFname" id="copyfname"></span>
+
+                <span id="target"></span></label>
+
+                <label>what’s your last name?</label>
+                <input type="text" name="LastName" id="last">
+
+                <label>What's your business email address?</label>
+                <input type="text" name="Email" id="email">
+
+                <label>And, what's your best phone number?</label>
+                <input type="text" name="Contact" id="cont">
+            </div>
+                
+            <div class="tab">
+                <p>Ok - great - now for some general company stuff.</p>
+
+                <label>What's the official business name that you'd like displayed on your invoices?</label>
+                <input type="text" name="BusinessName" id="businame">
+
+                <label>What's your main company phone number?</label>
+                <input type="text" name="BusinessContact" id="busicont">
+
+                <label>What's the physical address of your head office?</label>
+                <textarea name="HFAddress" id="hfaddress"></textarea>
+
+                <label>What's your postal address?</label>
+                <p>(If this is the same as your last answer - just write "Same as Above")</p>
+                <textarea name="PAddress" id="paddress"></textarea>
+
+                <label>What are your opening hours?</label>
+                <p>(This is so our team knows when we should and shouldn't call)</p>
+                <input type="time" name="BusinessHours" id="busihrs">
+
+                <label>Are you the Primary IT Contact of your business?</label>
+                <p>(The Primary IT Contact is the person we will talk to about things like approving new user
+                    accounts, billing changes, authorized contact changes, security issues and anything else
+                    business related)</p>
+                <input type="radio" value = "Yes" name="IT_Contact" id="option" onchange="message(this.value)">YES
+                <input type="radio" value = "No" name="IT_Contact" id="option" onchange="message(this.value)">NO
+
+                <div hidden id="yesmsg"><b>Great - we'll set you up as the Primary IT Contact.
+
+                </div>
+            </div>
+                
+            <div class="tab">
+                <div hidden id="nomsg">
+                    <label>Ok - what's the first name of your companies Primary IT Contact?</label>
+                    <input type="text" name="PrimaryFname" id="pfname">
+
+                    <label>What's his/her last name?</label>
+                    <input type="text" name="PrimaryLname" id="plname">
+
+                    <label>What is his/her email address?</label>
+                    <input type="text" name="PrimaryEmail" id="pemail">
+
+                    <label>Finally - what's his/her mobile phone number?</label>
+                    <input type="text" name="PrimaryContact" id="pcont">
+                </div>
+            </div>    
+                
+            <div class="tab">
+                <label>List any other people in your business that you'd like to authorize to have full access to
+                    your account.</label>
+                <p>(Please list their First Name, Last Name, Mobile Phone Number and Email Address on
+                    separate line items in the box below. If you ever need to remove any of these people, please
+                    just let us know. We will only accept changes to the Authorized Contact list from the Primary
+                    IT Contact)</p>
+                <textarea name="OtherPeople" id="other"></textarea>
+            </div>
+                
+            <div class="tab">
+                <p>Ok - great - next up we need to find out where to send Invoices to (so we can make sure our
+                    team gets paid so we can eat ).
+                    </p>
+                <label>So, what's the first name of your Accounts Payable person?</label>
+                <input type="text" name="AcoountsFirstName" id="accontsfname" onchange="afName(this)">
+
+                <label>And, what's </label>
+                <span name="CopyAFname" id="copyafname"></span>
+
+                <span id="Atarget"></span>
+
+                <label>'s last name?</label>
+                <input type="text" name="AcoountsLastName" id="accontslname">
+
+                <label>What's their best phone number?</label>
+                <input type="text" name="AcoountsContact" id="acconts_countact">
+
+                <label>Finally, what's their best email address?</label>
+                <input type="text" name="AcoountsEmail" id="acconts_email">
+            </div>
+                
+            <div class="tab">
+                <p>Great , thanks - we're nearly finished so hopefully you're enjoying your coffee (or green
+                    smoothie ).</p>
+                <p>These next few questions are optional, however they help us tailor things to help us give you
+                    the best experience we can.</p>
+                <label>First up, if we could wave a magic wand and solve the 3 most frustrating things in your
+                    business with Technology, what would they be?</label>
+                <p>(no promises, but it might give us some ideas for where we can help you get the most
+                    impact)</p>
+                <textarea name="Tech" id="tech"></textarea>
+
+                <label>If you've worked with an MSP / Outsourced IT Service Provider before, what did you
+                    love about working with them?</label>
+                <p>(E.g. Their engineers always answered the phone directly when we called)</p>
+                <input type="text" name="ITServiceprovider" id="ITservice">
+
+                <label>And, on the flipside - what (if anything) frustrated you about working with them?</label>
+                <p>(E.g. They never answered the call and always took ages to call us back)</p>
+                <textarea name="Frustrated" id="frustrated"></textarea>
+
+                <label>Is there anything else we should know that could help us deliver an exceptional service
+                    to you?</label>
+                <textarea name="Exceptional" id="exceptional"></textarea>
+            </div>
+                
+            <div class="tab">
+                <p>Finally - we hate legalese as much as anyone however it's a necessity in modern
+                    business world, so do you agree to our Terms & Conditions.</p>
+                <a href="https://www.fortify247.net/terms-and-conditions/">https://www.fortify247.net/terms-and-conditions/</a> 
+                <p>(If you have any questions on any of the legalese - please jump on a call with us and we can
+                    run through any questions with you)</p>
+                
+                <input type="radio" name="Agreement" id="agree">
+                <label>YES, I AGREE</label>
+                
+                <p>Awesome - that's everything. Hope the coffee / smoothie tasted great.
+                    Simply click the <b>SUBMIT</b> button and we'll be notified of your responses and will get you all
+                    setup in our systems ready to go!
+                    We will be in touch shortly with the next steps.
+                    Again - we can't wait to start working with you</p>
+            </div>
+                
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>   
+
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+    </form>
+
+    <script>
+        var currentTab = 0; 
+        showTab(currentTab); 
+        
+        function showTab(n) {
+          var x = document.getElementsByClassName("tab");
+          x[n].style.display = "block";
+          if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+          } else {
+            document.getElementById("prevBtn").style.display = "inline";
+          }
+          if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+          } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+          }
+          fixStepIndicator(n)
+        }
+        
+        function nextPrev(n) {
+          // This function will figure out which tab to display
+          var x = document.getElementsByClassName("tab");
+          // Exit the function if any field in the current tab is invalid:
+          if (n == 1 && !validateForm()) return false;
+          // Hide the current tab:
+          x[currentTab].style.display = "none";
+          // Increase or decrease the current tab by 1:
+          currentTab = currentTab + n;
+          // if you have reached the end of the form...
+          if (currentTab >= x.length) {
+            // ... the form gets submitted:
+            document.getElementById("regForm").submit();
+            return false;
+          }
+          // Otherwise, display the correct tab:
+          showTab(currentTab);
+        }
+        
+        function validateForm() {
+          // This function deals with validation of the form fields
+          var x, y, i, valid = true;
+          x = document.getElementsByClassName("tab");
+          y = x[currentTab].getElementsByTagName("input");
+          // A loop that checks every input field in the current tab:
+          for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+            if (y[i].value == "") {
+              // add an "invalid" class to the field:
+              y[i].className += " invalid";
+              // and set the current valid status to false
+              valid = false;
+            }
+          }
+          // If the valid status is true, mark the step as finished and valid:
+          if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+          }
+          return valid; // return the valid status
+        }
+        
+        function fixStepIndicator(n) {
+          // This function removes the "active" class of all steps...
+          var i, x = document.getElementsByClassName("step");
+          for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+          }
+          //... and adds the "active" class on the current step:
+          x[n].className += " active";
+        }
+        </script>
+        
+</body>
+</html>
