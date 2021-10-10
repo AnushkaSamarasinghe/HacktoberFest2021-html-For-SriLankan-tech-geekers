@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    background-color:beige;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+}
+.teamslogo{
+    height: 40px;
+    width:200px;
+    position: relative;
+    top:80px;
+    background-image: url("teamslogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container{
+    width:450px;
+    height: 380px;
+    position: relative;
+    top:100px;
+    background-color:white;
+    box-shadow: 2px 10px 10px grey;
+}
+.container:hover{
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+}
+.microsoftlogo{
+    width:130px;
+    height:30px;
+    margin-top: 30px;
+    margin-left: 40px;
+    background-image:url("microsoftlogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.content{
+    padding-top: 15px;
+    padding-left: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:bolder;
+    font-size:medium;
+}
+.content p{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+input[type=text]{
+    width:350px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+}
+button{
+    width:100px;
+    height: 30px;
+    margin-top: 50px;
+    margin-left:300px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+    color: white;
+    background-color:#0067B8;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #005DA6;
+}
+@media screen and (max-width:600px) {
+    .container{
+        width:350px;
+        height:400px;
+    }
+    input[type=text]{
+        width:250px;
+    }
+    button{
+        margin-left: 200px;
+    }
+}
