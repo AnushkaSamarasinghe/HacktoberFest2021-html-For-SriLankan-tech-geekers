@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel='stylesheet'>
+</head>
+
+<body>
+   <header>Draw on the canvas</header>
+<canvas id="canvas" > </canvas>
+
+    <div class="field">
+        <div class="tools">
+            <button onClick="undoLast()" type="button" class="button"> Undo</button>
+            <button onClick="clearCanvas()"type="button" class="button">Clear</button>
+
+            <div onClick="changeColor(this)" class="color-field" style="background:red;"></div>
+            <div onClick="changeColor(this)" class="color-field" style="background:blue;"></div>
+            <div onClick="changeColor(this)" class="color-field" style="background:green;"></div>
+            <div onClick="changeColor(this)" class="color-field" style="background:yellow;"></div>
+            <div onClick="changeColor(this)" class="color-field" style="background:brown;"></div>
+            <div onClick="changeColor(this)" class="color-field" style="background:purple;"></div>
+            <div onClick="changeColor(this)" class="color-field" style="background:black;"></div>
+            
+            <input type="range" onInput="penWidth = this.value" min="1" max="100" class="pen-width">
+            <input onInput ="penColor = this.value" type="color" class="color-picker">
+       </div>       
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!--Contributed by Yuri (https://github.com/YuriCodes) -->
