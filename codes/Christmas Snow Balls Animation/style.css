@@ -1,0 +1,115 @@
+*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-color: #000;
+	}
+	span{
+		position: absolute;
+		background-color: #fff;
+		box-shadow:  0 	0 10px  #fff,
+					 0	0 20px  #fff,
+					 0	0 40px  #fff,
+					 0	0 60px  #fff;
+		border-radius: 60px;
+		animation: falling 1.7s linear infinite;
+		animation-delay: calc(.17s * var(--i));
+	}
+	@keyframes falling{
+		0%{
+			top: 0%;
+		}
+		90%{
+			top: 90%;
+		}
+	}
+	span:nth-child(1){
+		left: 55%;
+		height: 35px;
+		width: 35px;
+	}
+	span:nth-child(2){
+		left: 10%;
+		height: 10px;
+		width: 10px;
+	}
+	span:nth-child(3){
+		left: 50%;
+		height: 10px;
+		width: 10px;
+	}
+	span:nth-child(4){
+		left: 80%;
+		height: 40px;
+		width: 40px;
+	}
+	span:nth-child(5){
+		left: 25%;
+		height: 23px;
+		width: 23px;
+	}
+	span:nth-child(6){
+		left: 94%;
+		height: 15px;
+		width: 15px;
+	}
+	span:nth-child(7){
+		left: 30%;
+		height: 50px;
+		width: 50px;
+	}
+	span:nth-child(8){
+		left: 5%;
+		height: 15px;
+		width: 15px;
+	}
+	span:nth-child(9){
+		left: 70%;
+		height: 15px;
+		width: 15px;
+	}
+	span:nth-child(10){
+		left: 20%;
+		height: 20px;
+		width: 20px;
+	}
+	article{
+		position: absolute;
+		background-color: #fff;
+		font-size: 70px;
+		color: #fff;
+		bottom: 0px;
+		width: 100%;
+		box-shadow: 0 0 10px #fff,
+					0 0 20px #fff,
+					0 0 40px #fff,
+					0 0 80px #fff;
+	}
+	img{
+		position: absolute;
+		bottom: 0px;
+		left: 10%;
+	}
+	#image{
+		position: absolute;
+		left: 35%;
+		bottom: 0px;
+	}
+	h1{
+		width: 400px;
+		position: absolute;
+		font-family: serif;
+		font-size: 30px;
+		top: 20px;
+		left: 50%;
+  	margin-left: -200px;
+		color: #fff;
+		animation: blinker 1.3s infinite;
+        text-shadow: 5px 5px 20px yellow;
+    }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
