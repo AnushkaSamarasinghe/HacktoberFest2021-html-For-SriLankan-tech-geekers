@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumma's Garden</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /*CSS Reset*/
+    body{
+        font-style: italic ;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhqqGthl4S_91hqoqzfZVqRdu3xiPxM0fjZQ&usqp=CAU');
+        /*height: 4000px;*/
+    }
+    .left{
+        /*border: 2px solid red;*/
+        display: inline-block;
+        left: 34px;
+        top: 20px;
+        position: absolute;
+        /* opacity: 0.3; */
+        
+    }
+    .left img{
+        width: 80px;
+        text-align: center;
+    }
+    .left div{
+        text-align: center;
+        font-size: 12px;
+        color:black;
+    }
+    .right{
+        position: absolute;
+        right: 34px;
+        top: 20px;
+       /* border: 2px solid green;*/
+        display: inline-block;
+    }
+    .mid{
+        display: block;
+        width: 55%;
+        /*border: 2px solid blue;*/
+        margin: 20px auto;
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+    }
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 34px;
+        font-size: 25px;
+    }
+    .navbar li a:hover{
+        color:grey;
+        text-decoration: underline;
+        padding: 34px;
+        font-size: 25px;
+        
+    }
+    .btn{
+        margin: 0px 9px;
+        padding:4px 14px ;
+        color: white;
+        background-color: black;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: grey;
+    }
+    .container{
+        border: 2px solid white;
+        margin: 40px 200px;
+        padding: 90px 80px;
+        width: 33%;   
+        border-radius: 20px; 
+        }
+    .formgroup input{
+        font-size: 20px;
+        margin: 11px auto;
+        text-align: center;
+        display: block;
+        border: 2px solid black;
+        padding: 2px;
+        width: 20p;
+        border-radius: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .container h1{
+        text-align: center;
+        font-size: 70px;
+    }
+    .container .btn{
+        display: block;
+        width: 20%;
+        margin: 20px auto;
+    }
+</style>
+<body>
+    <header class="header">
+        <!-- Left box for logo-->
+        <div class="left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoiFwcn619WjziOPzsUytO14_WZY5MciY8Fg&usqp=CAU" alt="">
+            <div>Hello Everyone</div>
+        </div>
+        <!--Mid box for navigation-->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Right box for buttons-->
+        <div class="right">
+            <button class="btn">
+                Call Us
+            </button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join Us</h1>
+        <form action="noaction.php">
+            <div class="formgroup">
+                <input type="text" name=" " placeholder="Enter your Name">
+            </div>
+            <div class="formgroup">
+                <input type="text" name=" " placeholder="Enter your Address">
+            </div>
+            <div class="formgroup">
+                <input type="number" name=" " placeholder="Enter your Age">
+            </div>
+            <div class="formgroup">
+                <input type="text" name=" " placeholder="Enter your Gender">
+            </div>
+            <div class="formgroup">
+                <input type="number" name=" " placeholder="Enter your Phone Number">
+            </div>
+            <div class="formgroup">
+                <input type="text" name=" " placeholder="Enter your Email ID">
+            </div>
+            <div class="formgroup">
+                <input type="text" name=" " placeholder="Enter your Hobbies">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
