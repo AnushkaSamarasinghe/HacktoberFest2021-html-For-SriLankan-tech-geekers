@@ -1,0 +1,28 @@
+<div id="app">
+  <transition v-on:enter="enter" v-bind:css="false" appear>
+    <div class="butter-cheese-eggs" v-show="true">
+      <div v-for="(block, index) in grid" @click="select(index)">
+        <block :figure.sync="block.figure" />
+      </div>
+    </div>
+  </transition>
+  
+  <transition v-on:enter="enterWin" v-bind:css="false">
+    <win v-show="winner" :click-handler="restart"></win>
+  </transition>
+</div>
+
+<template id="block">
+  <div class="block">
+    <transition v-on:enter="enter" v-bind:css="false">
+      <span v-show="figure > -1">{{ fig }}</span>
+    </transition>
+  </div>
+</template>
+
+<template id="win">
+  <div class="win">
+    <h2>Win</h2>
+    <!--<button @click="clickHandler">Play again</button>-->
+  </div>
+</template>
