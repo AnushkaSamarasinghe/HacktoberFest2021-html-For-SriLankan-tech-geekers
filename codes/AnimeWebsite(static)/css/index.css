@@ -1,0 +1,78 @@
+body{
+    background-image: url('./images/naruto/power.jpg');
+}
+
+
+header{
+    background-color: #807BF3;
+}
+
+main{
+    background-color: #9591F4;
+}
+
+.main-img{
+   background: url("/images/download.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+footer{
+    background-color: #6B66E3;
+}
+
+img{
+    width: 85%;
+    margin: 5%;
+    height: auto;
+}
+
+img:hover{
+    box-shadow: 4px 4px 4px 4px  #807BF3;
+    transform: scale(1.1);
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header-nav{
+    margin: 2%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.box{
+    width:25%;
+    border:2px solid #6B66E3;
+    box-shadow: 4px 4px 4px 4px  #807BF3;
+    height: auto;
+    margin: 1%;
+}
+
+.box1{
+    width: 33%;
+    padding: 3%;
+}
+
+.flex-col{
+    width: 33%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description{
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
