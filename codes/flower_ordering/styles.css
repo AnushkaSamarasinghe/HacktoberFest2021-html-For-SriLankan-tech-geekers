@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+		background-image: url("Images/masaaki-komori-NoXUQ54pDac-unsplash.jpg");	
+		background-repeat: no-repeat;
+		background-position:middle;
+		background-attachment:fixed;
+		background-size:cover;
+		margin-left:70px;
+		margin-right:70px;
+		font-family: sansation;
+}
+		
+	
+.header{
+	background-image:url("Images/h3-slider-background.jpg");
+	  background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #bbb;		
+		width:100%;
+		height: 400px;	
+
+	   
+}
+.header h3{
+position:relative;
+top: 80px;
+  left: 16px;
+  font-size: 58px;	
+  color:#660029;
+}
+/**************Styles of nevigation bars*********************/
+.topnav h2{
+	font-family:Optima;
+	color:	 #660029;
+	font-size:55px
+}
+ .topnav ul {
+  list-style-type:none ;  
+  padding:30;
+  overflow: hidden;
+  background-color:#ffffff;  
+  font-family: "Lucida Console", Courier, monospace;
+  color:#000000;
+  height:100px;
+  display:fixed;
+  text-align:center;
+  
+}
+
+
+.topnav li {
+  margin-right:0px;
+  float:left;
+
+}
+
+.topnav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Lucida Console", Courier, monospace;
+  color:#000000;
+  
+}
+
+.topnav li a:hover {
+	background-color: #f1f1f1;
+	color:#ff0066;
+	
+}
+
+
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 22%;
+  background-color:;
+  margin:5px;
+}
+.column a{
+  text-decoration: none;
+  font-family:Times New Roman;
+  color:#000000;
+ font-size:20px;
+	
+}
+
+.column a:hover{
+	color:#ff0066;
+	
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+/******************Styles of gelary*****************************/
+.gallery {
+  margin: 15px;
+  border: 1px solid #ccc;
+  float:left;
+  width:250px;
+  height:450px;
+  background-size: cover;
+  background-color: #f2f2f2;  
+}
+
+imag{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;	
+  clear:after;
+  width:100%;
+  height:100%
+	
+}
+.gallery:hover{
+	 border: 3px solid #ccc;
+	
+}
+
+
+
+.desc {
+  padding: 10px;
+  text-align: center;
+}
+.desc a{
+	text-align: center;
+	text-decoration:none;
+	font-size:15px;
+	color:red;
+	  font-family: "Lucida Console", Courier, monospace;
+  color:#000000;
+}
+.desc a:hover{
+	color: #660029;
+	font-size:18px;
+	
+}
+
+.bottomnavy{
+		background-color: red;
+		height:250px;		
+		text-align: center;		
+		margin:10px;
+	
+}
+/* Fake vedio */
+.fakevedio {
+  background-color: ;
+  width: 50%;
+  padding: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: ;
+  width: 100%;
+  padding: 10px;
+  background-size:;
+  height:100%;
+  background-repeat: no-repeat;
+}
+
+.circle {
+  height: 250px;
+  width: 250px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display:inline-block;
+  overflow:hidden;
+  margin:10px;
+}
+.circle:hover {
+  border: 1px solid #777;
+  opacity: 0.6;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  background-attachment:fixed;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=pasword], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #ff9999;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #ff5050;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+/* Add a card effect for articles */
+.card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 35%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 65%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+.pagination {
+  display: inline-block;
+  
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+	
+}
+
+
+table, th ,td {
+	border-bottom:1px solid black;
+	border-spacing: 5px;
+  
+   
+  
+}
+
+th,td{
+	padding:10px;
+	margin-right:10px;
+	text-align:center;
+	border-bottom: 1px solid black;
+}
+
+.button {
+  background-color: #ff9999; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 16px;
+  margin-left: 75% ;  
+  margin-top:10px;
+  margin-right:10px;
+  overflow:auto;
+  cursor: pointer;
+  
+}
+
+.button:hover {
+  background-color: #ff5050; /* Green */
+  color: white;
+}
+
+.list {
+	color:#4CAF50;
+	text-decoration: none; 
+	font-size:20px;
+}
+
+.cartbutton {
+	background-color:#ff9999;
+	 color: white;
+	  padding: 5px 10px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 12px;
+	  margin: 5px 70px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  font-family: "Lucida Console", Courier, monospace;
+}
+
+.cartbutton:hover {
+	background-color: #ff5050;
+	width:110px;
+	height:30px;
+	padding: 10px 12px;
+	
+}
+.cartbutton a{
+	text-decoration:none;
+	font-family: "Lucida Console", Courier, monospace;
+	text-align: center;
+	color: white;
+}

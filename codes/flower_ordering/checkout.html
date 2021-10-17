@@ -1,0 +1,158 @@
+<html>
+	
+	<head>
+	
+		<link rel="stylesheet" href="styles.css">
+		<title>Chechout</title>
+		
+	</head>
+
+	<body>
+	 <!--********************* Start of the top nevigation bar******************-->
+		 <div class="topnav" >
+			<h2 >ProFlowers</h2>
+			<ul >			
+				<li>
+					<a  href="home_page.html">Home</a>
+				</li>
+				<li>
+					<a  href="product.html">Products</a>
+				</li>
+				<li>
+					<a href="contact_us.html">Contact us</a>
+				</li>
+				<li>
+					<a href="about_us.html">About Us</a>
+				</li>
+				<li>
+					<a href="my_account.html">My account</a>
+				</li>
+				<li style="float:right;">
+					<a href="cart.html">Cart</a>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- ****************************End of the top nevigation bar ************************************-->
+		
+		<!--****************************Start of the headr bar ****************************-->
+		<div class="header">
+			  <h3 >Send flowers<br> Like you mean it.</h3>
+			
+			
+		</div>
+		<!--**************************** End of the headr bar****************************-->
+
+				<!--**************************** Start of the second nevigation bar ****************************-->
+	
+
+		<!-- ****************************End of the second nevigation bar ****************************-->
+		
+		
+		<div class="row" id="checkout">				
+			<div class="card">
+					
+				<form  style="margin:15px;padding:20px; width:100%">
+					<div class="column" style="width:45%; margin:15px;">
+					
+						<label for="fname">First Name</label>						
+						<input type="text" id="fname" name="firstname" placeholder="Your name..">
+						
+						<label for="lname">Last Name</label>						
+						<input type="text" id="lname" name="lastname" placeholder="Your last name.."> 
+						
+						<label for="address">Address</label>							
+						<input type="text" id="address" name="address" placeholder="Your adrdess"> 
+						
+						<label for="country">Country</label>						
+						<select id="country" name="country">
+							<option value="australia">Sri Lanka</option>
+							<option value="australia">Australia</option>
+							<option value="canada">Canada</option>
+							<option value="usa">USA</option>
+						</select>
+					</div>
+					<div class="column" style="width:45%; margin:15px;">
+				
+						<label for="town">Town/city</label>
+						<input type="text" id="town" name="town"> 
+								
+						<label for="postcode">Postcode/ZIP</label>
+						<input type="text" id="postcode" name="postcode"> 
+								
+						<label for="phone">Phone</label>
+						<input type="text" id="phone" name="phone">
+								
+						<label for="email">Email address</label>
+						<input type="text" id="email" name="email">
+					
+					</div>							
+				</form>
+				<table style="width:100%; padding:20px;">
+					<tr>
+						<th>Product</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>total</th>
+					</tr>
+					<tr>
+						<td>					
+							<img src="Images/product01.jpg" alt="Cinque Terre" style="width:100px; height:100px;" >			
+						</td>
+						<td>Rs.00.00</td>
+						<td>
+							<div class="pagination">
+								<a>&laquo;</a>
+								<a>1</a>				  
+								<a>&raquo;</a>
+							</div>
+						</td>
+						<td>Rs.00.00</td>
+					</tr>
+					<tr>
+						<td>								
+							<img src="Images/product02.jpg" alt="Cinque Terre" style="width:100px; height:100px;" >
+						</td>
+						<td>Rs.00.00</td>
+						<td>
+							<div class="pagination">
+								<a>&laquo;</a>
+								<a>1</a>				  
+								<a>&raquo;</a>
+							</div>
+						</td>
+						<td>Rs.00.00</td>
+					</tr>
+					<tr >
+						<th style="border-bottom:none;"></th>
+						<th style="border-bottom:none;"></th>
+						<th style="border-bottom:none;">Total</th>
+						<th style="border-bottom:none;">Rs.00.00</th>
+					</tr>	
+				</table>
+
+				
+								
+				<form  style=" border-style: ridge; margin-left:150px; margin-top:10px;padding:20px; width:75%;font-size:20px; ">
+					<p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.	</p>
+					
+					<input type="radio" id="paypal" name="payment" value="paypal">				
+					<label for="paypal">PayPal</label>
+					
+					<input type="radio" id="visa" name="payment" value="visa">
+					<label for="visa">Visa</label>
+					
+					<input type="radio" id="other" name="payment" value="other">
+					<label for="other">Other</label>
+					
+					<input type="submit" class="button" value="Pay" style="width:150px; margin-left:150px; " >						
+							
+				</form>
+			</div>
+		</div>		 
+		<div class="footer">
+			<p>ProFlowers</p>
+		</div>
+		
+	</body>
+</html>
