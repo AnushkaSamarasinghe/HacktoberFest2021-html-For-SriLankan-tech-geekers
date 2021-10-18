@@ -1,0 +1,45 @@
+/* Khushi Prasad */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .home,
+  .services,
+  .products,
+  .sign-up {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  
+  .services {
+    background: url('./img-2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100px;
+    color: white;
+  }
+  
+  .products {
+    background: url('./img-1.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100px;
+    color: white;
+  }
+  
+  .sign-up {
+    background: url('./img-8.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100px;
+    color: white;
+  }
