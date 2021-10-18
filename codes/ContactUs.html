@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "montserrat", sans-serif;
+        }
+        body{
+            background: url(background.jpg);
+            background-size: cover;
+            height: 600px;
+        }
+        .contact-section{
+            background: url(background.jpg);
+            background-size: cover;
+            padding: 40px 0;
+        }
+        .contact-section h1{
+            text-align: center;
+            color: #ddd;
+            margin-bottom: 40px;
+        }
+        .border{
+            width: 100px;
+            height: 10px;
+            background: #34495e;
+            margin: 40px auto;
+        }
+        .contact-from{
+            max-width: 600px;
+            margin: auto;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+        .contact-from-text{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 16px 0;
+            border: 0;
+            background: #111;
+            padding: 20px 40px;
+            outline: none;
+            color: #ddd;
+            transition: 0.5s;
+            border-radius: 10px;
+        }
+        .contact-from-text:focus{
+            box-shadow: 0 0 10px #34495e;
+        }
+        textarea.contact-from-text{
+            resize: none;
+            height: 120px;
+        }
+        .contact-from-btn{
+            float: right;
+            border: 0;
+            background: #2850a5;
+            color: #fff;
+            padding: 12px 5opx;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            height: 40px;
+            width: 90px;
+        }
+        .contact-from-btn:hover{
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        <form action="connect.php" class="contact-from" action="index.html" method="post">
+            <input type="text" class="contact-from-text" placeholder="Your Name" name="name">
+            <input type="email" class="contact-from-text" placeholder="Your email-id" name="email">
+            <input type="text" class="contact-from-text" placeholder="Your Phone-No." name="phone">
+            <textarea class="contact-from-text" placeholder="Your Message" name="message"></textarea>
+            <input type="submit" class="contact-from-btn" value="Send">
+        </form>
+    </div>
+</body>
+</html>
