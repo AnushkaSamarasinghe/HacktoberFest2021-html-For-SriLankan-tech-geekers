@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+     <style>
+       *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+   background: linear-gradient(rgb(187, 187, 235)  0%,rgb(116, 125, 158) 100%);
+}
+.container{
+    position: relative;
+  max-width: 400px;
+ position: fixed;
+ left: 40%;
+  width: 100%;
+  margin: 200px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 4px;
+ box-shadow: 1rem 1rem 1.0rem rgb(147, 156, 182);
+
+}
+.container header{
+    font-size: 2rem;
+    font-weight: 700px;
+    font-family: sans-serif;
+    text-shadow: .1rem .1rem .1rem gray;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+   
+}
+.inputField {
+ 
+display:flex ;
+
+height: 45px;
+width: 100%;
+margin: 20px 5px;
+
+}
+.inputField input{
+    flex: .85;
+    height: 100%;
+    outline: none;
+    border: 1px solid rgb(184, 180, 180);
+    font-size: 1.3rem;
+    border-radius: 3px;
+    padding-left: 15px;
+    
+}
+.inputField button{
+    width: 50px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(182, 83, 202);
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 1%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.todolist{
+    max-height: 300px;
+   overflow-y: scroll;
+}
+.todolist li{
+    padding: 1% 15px;
+ line-height: 45px;
+ margin-bottom: 8px;
+   list-style: none;
+   font-size: 1.4rem;
+   font-family: sans-serif;
+   background-color: #f2f2f2;
+   color: rgb(70, 68, 70);
+   cursor: default;
+  
+}
+.todolist li span{
+    position: absolute;
+  right: 7%;
+  font-size: 1.4rem;
+   width: 30px;
+  
+ visibility: hidden;
+   cursor: pointer;
+  transition: all  0.2s ease;
+  color: rgb(226, 98, 98);
+}
+.todolist li:hover span{
+    right: 7%;
+    color: rgb(214, 35, 35);
+    visibility: visible;
+
+}
+  </style>
+  //for fontawesome icons
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+      <header>Todo App</header>
+
+      <div class="inputField" >
+          <input type="text"  placeholder="Add your todos here">  //input to write todos
+         <button><i class="fas fa-plus"></i></button>   //button to add todos
+      </div>
+      <ul class="todolist">
+        
+         
+      </ul>
+
+  </div>
+    
+    <script >
+      const inputBox = document.querySelector('.inputField input')
+const inputButton = document.querySelector('.inputField button')
+const todolist = document.querySelector('.todolist')
+const del = document.querySelector('span')
+//on writing into input box
+inputBox.onkeyup = () => {
+    let userData = inputBox.value;
+    if (userData.trim() != 0) {
+        inputButton.classList.add("active")
+    }
+    else {
+        inputButton.classList.remove("active")
+    }
+}
+//adding it todolist
+inputButton.onclick = () => {
+    let userData = inputBox.value;
+    let getLocalStorage = localStorage.getItem("New Todo")
+
+    if (getLocalStorage == null) {
+        list = []
+    }
+    else {
+        list = JSON.parse(getLocalStorage);
+    }
+    list.push(userData);
+    localStorage.setItem("New Todo", JSON.stringify(list))
+   showList();
+}
+//showing todos added in the list 
+function showList() {
+    let getLocalStorage = localStorage.getItem("New Todo");
+
+    if (getLocalStorage == null) {
+        list = []
+    }
+    else {
+        list = JSON.parse(getLocalStorage);
+    }
+    let newLitag = '';
+    list.forEach((element,index) => {
+        newLitag +=`  <li>${element}<span onclick="deltask(${index})"><i class="fas fa-trash"></i></span></li>`
+    });
+
+    todolist.innerHTML=newLitag
+   inputBox.value=""
+}
+//on clicking the delete icon this function will be called and it will remove that todo from the list
+function deltask(index){
+    let getLocalStorage=localStorage.getItem("New Todo")
+    list= JSON.parse(getLocalStorage)
+    list.splice(index,1)
+
+    localStorage.setItem("New Todo",JSON.stringify(list))
+    showList()
+   
+}
+  </script>
+</body>
+</html>
