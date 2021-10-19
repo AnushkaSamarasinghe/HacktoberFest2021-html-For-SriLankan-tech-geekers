@@ -1,0 +1,135 @@
+body {
+  text-align: center;
+  background-color: #020329;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #4b94d8;
+
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+.q{
+  background-image: url("images/white-key.png");
+}
+.w {
+background-image: url("images/black-key.png");
+}
+.e{
+  background-image: url("images/white-key.png");
+}
+.r{
+  background-image: url("images/black-key.png");
+}
+.a {
+  background-image: url("images/white-key.png");
+}
+
+.s {
+  background-image: url("images/black-key.png");
+}
+
+.d {
+  background-image: url("images/white-key.png");
+}
+.f{
+  background-image: url("images/black-key.png");
+}
+.z{
+  background-image: url("images/white-key.png");
+}
+.x{
+  background-image: url("images/black-key.png");
+}
+.c{
+  background-image: url("images/white-key.png");
+}
+.u{
+  background-image: url("images/black-key.png");
+}
+.i{
+  background-image: url("images/white-key.png");
+}
+.o{
+  background-image: url("images/black-key.png");
+}
+.p{
+  background-image: url("images/white-key.png");
+}
+.h{
+  background-image: url("images/black-key.png");
+}
+.j {
+  background-image: url("images/white-key.png");
+}
+
+.k {
+  background-image: url("images/black-key.png");
+}
+
+.l {
+  background-image: url("images/white-key.png");
+}
+.b{
+  background-image: url("images/black-key.png");
+}
+.n{
+  background-image: url("images/white-key.png");
+}
+.m{
+  background-image: url("images/black-key.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.piano {
+  outline: none;
+  border: 1px solid #101011;
+  font-size: 2rem;
+  font-family: 'Arvo', cursive;
+  line-height: 5;
+  font-weight: 900;
+  color: #0e0a0b;
+  text-shadow: 3px 0 #DBEDF3;
+  display: inline-block;
+  width: 50px;
+  height: 375px;
+  text-align: center;
+  background-color: white;
+  margin-top: 2px;
+}
+.max{
+  height: 3rem;
+  width:83%;
+  margin:0 auto 0;
+  border: solid #0e0a0b;
+  background-color: #0e0a0b; 
+}
+.pro{
+  background-color: #fff;
+  border:solid #fff;
+  height:0;
+  width:83%;
+}
