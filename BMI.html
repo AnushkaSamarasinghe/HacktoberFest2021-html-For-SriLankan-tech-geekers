@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>BMI Calculator</title>
+		<style>
+			div{
+				align-items:center; 
+				width:200vw; 
+				height:100%; 
+				border:2px solid; 
+				border-radius:20px;
+				margin-left:35%;
+				color:rgb(253, 255, 249);
+				background-color:#083333;
+			}
+			div h3{
+				background-color:rgb(87, 7, 34);
+				color:white;
+				padding:10px;
+				text-align:center;
+				margin:0;
+				border-radius:20px
+			}
+			div p{
+				padding-left:10px; 
+				font-size:20px;
+				margin-left: 75px;
+			}
+			div input[type="number"],#serviceQual{
+				margin-left:95px;
+				padding:10px;
+			}
+			button{
+				text-transform:uppercase;
+				font-weight:bold;
+				width: 200px;
+				height: 50px;
+				font-size:17px;
+				color:white;
+				background:green;
+				margin-left:95px;
+			}
+			#answer{
+				margin-left: 90px;
+			}
+			</style>
+
+			<script>
+			function result(a,b,c){
+				var x=document.getElementById(a).value;
+				var y=document.getElementById(b).value;
+				var res = (Number(y))/(Number(x) * Number(x));
+				document.getElementById(c).innerHTML=res;
+			}
+			</script>
+	</head>
+	<body>
+		<div>
+			<h3>BMI CALCULATOR</h3>
+			<br/>
+			<p><b>Your Height in metres</b></p>
+			<b></b><input id="height" type="number" name="bil" min="1" placeholder="Height"/> <b>m</b>
+			<br/>
+			<br/>
+			<p><b>Your Weight in kilograms</b></p>
+			<input id="weight" type="number" placeholder="Weight" min="10"/> <b>kg</b>
+			<br/>
+			<br/><br/><br/>
+			<button type="button" onclick="result('height','weight','ans')">Calculate</button>
+			<br/><br/><br/>
+			<p id="answer" style="align:center"><b>Body Mass Index is:<br> (kg/sq m)<br><span id="ans"style="align:center"></span></b></p>
+		</div>
+	</body>
+</html>
