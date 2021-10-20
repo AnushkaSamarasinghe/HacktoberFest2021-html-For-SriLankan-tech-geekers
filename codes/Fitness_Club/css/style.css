@@ -39,6 +39,7 @@
             display: inline-block;
             /* border: 2px solid yellow; */
         }
+    
         
         .navbar{
             display: inline-block;
@@ -90,6 +91,12 @@
             margin: 8px auto;
             border-radius: 9px;
             font-family:'Baloo Bhai 2', cursive;
+        }
+        .form-group input:hover
+        {
+            cursor: pointer;
+            color:black;
+            background-color: darkgrey;
         }
         .container button{
             display: block;
