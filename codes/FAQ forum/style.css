@@ -1,0 +1,36 @@
+.container_center {
+  margin-top: 30px;
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  max-width: 96%;
+  border-radius: 5px;
+  width: max-content;
+}
+.btn:focus {
+  outline-color: none !important;
+}
+.navbar-collapse {
+  flex-grow: 0.01;
+}
+a,
+li,
+label {
+  font-size: large;
+}
+body {
+  background-color: rgb(228, 228, 228);
+}
+.form-control {
+  padding: 10px;
+}
+.navbar-collapse {
+  flex-grow: 0.01;
+}
+a,
+li {
+  font-size: large;
+}
+body {
+  background-color: rgb(228, 228, 228);
+}
