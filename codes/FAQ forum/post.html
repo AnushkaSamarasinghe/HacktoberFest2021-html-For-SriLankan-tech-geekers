@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css"/>
+
+    <title>Post - Online Exam Soln</title>
+  </head>
+ 
+
+  <body>
+    <div class="container-fluid-lg">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./home.html">Online Exam Soln</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="./home.html"
+                  >All</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./post.html">Post</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container-lg my-4">
+
+        <form action='./home.html'> 
+            <div class="mb-3">
+              <label for="exampleInputQuestion1" class="form-label">Question??</label>
+              <textarea class="form-control" rows="1"cols="1" id="floatingTextarea" placeholder="What's up?" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAnswer1" class="form-label">Answer</label>
+              <textarea class="form-control" rows="1"cols="1" id="floatingTextarea" placeholder="What's up?" required></textarea>
+            </div>
+          
+     
+            <button type="submit" class="btn btn-primary">Post</button>
+          </form>
+
+
+    
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"
+  ></script>
+</html>
