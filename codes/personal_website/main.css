@@ -1,0 +1,17 @@
+*{
+    margin: 5;
+}
+
+h1{
+    color: cadetblue;
+}
+
+h2{
+    color: coral;
+    font-weight: 400;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+fieldset{
+    block-size: 100px, 500px;
+}
