@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            height: 200px;
+            width: 400px;
+            margin: auto;
+            margin-top: 200px;
+        }
+        #int{
+            height: 50px;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow:0px 0px 10px gray;
+        }
+        #btn{
+            height: 50px;
+            width: 100px;
+            margin-top: 10px;
+            background-color: rgb(40, 209, 17);
+            border-radius: 30px;
+            color: yellow;
+            font-size: 20px;
+            box-shadow:0px 0px 10px gray;
+        }
+        #result{
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow:0px 0px 10px gray;
+        }
+        #hh{
+            color: red;
+        }
+    </style>
+    <div class="box">
+        <h1 id="hh">Calculate Even or Odd</h1>
+        <input type="number" id="int" placeholder="   Enter Number">
+        <button id="btn" onclick="evenodd()">Check</button><br>
+        <input type="text" id="result" placeholder="   your reslt">
+    </div>
+    <script>
+        function evenodd(){
+            var n=document.getElementById("int").value;
+            if(n==0)
+            {
+                document.getElementById("result").value="   Enter a number greater then '0'";
+            }
+            else
+            {
+            var a=n%2;
+            if(a==0)
+            {
+                document.getElementById("result").value="     Even";
+            }
+            else
+            {
+                document.getElementById("result").value="     Odd";
+            }
+            }
+        }
+    </script>
+</body>
+</html>
