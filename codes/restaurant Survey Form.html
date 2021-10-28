@@ -1,0 +1,99 @@
+<!--- I am Garvit Agrawal. --->
+
+<html>
+ <head>
+  <title >Survey-Form</title>
+   <style>
+    body{
+	  background-color:rgb(247, 212, 212);
+	    font-family: sans-serif;
+	      color:rgb(95, 112, 112);
+	        text-align:left;
+		
+	}
+	h1{
+	    background-color:white;
+		text-align:center;
+	}
+	#survey-form section input{
+	      width:200px;
+		  padding:5px 5px;
+	}
+	#other-input input{
+	     text-align:center;
+		 margin-left:px;
+		 
+	}
+	
+    form .form-control{ 
+				margin: 10px 0px;
+	}
+	#name-label,#number-label,#email-label{
+	        
+			display:inline-block ;
+				width: 100px;
+	}
+	#textarea{
+	      width:1100px;
+	      text-align:center;
+	}
+	section{
+	      margin-left:400px;
+	}
+	#submit{
+	margin-left:40px;
+	}
+	
+
+   </style>
+ </head>  
+  <body>
+   <h1 id="title">The Restaurant Survey</h1> 
+   <section>
+    <p>Give your Opinion!</p>
+     <form id="survey-form">
+	  
+	    <div class="form-control">
+	       <label id="name-label">First Name:</label>
+		     <input type="text" placeholder="Enter the Name" required >
+		</div>
+        <div class="form-control">
+	       <label id="email-label">Email:</label>
+		     <input type="email" placeholder="Enter the e-mail" required>
+		</div> 
+        <div class="form-control">
+	       <label id="number-label">Age:</label>
+		     <input type="number" min="5" max="120" placeholder="Enter the age">
+		</div>
+	  
+	  <div id="other-input">
+        <div class="form-control">
+	       <label id="dropdown">Do you like our restaurant </label>
+		      <select>
+			    <option value="Yes">Yes</option>
+				<option value="No">No</option>
+			  </select>
+		</div>	
+        <br>
+        <br>
+        <div class="button-control">	
+		    <label id="radio" >What do you like about our restaurant</label><br>
+			<input type="radio" name="Times " >It's Cheap<br>
+			<input type="radio" name="Times " >It provide good quality meal.<br>
+			<input type="radio" name="Times " >It's catering Service<br>
+			<input type="radio" name="Times " >It serves healthy and tasty food<br>
+		</div>	
+		<br>
+        <br>
+        
+		<div id="textarea">
+		   <p>Enter Your comments here....<p>
+		    <textarea rows="4" columns="7" placeholder="Enter your text...."></textarea>
+		</div>	
+		<div id="submit">
+		    <input type="Submit">
+		</div>
+		</section>
+  </body>
+ <head> 
+<html>
