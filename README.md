@@ -1,4 +1,3 @@
-<img width="1181" alt="2022-09-27-at-08 03 21" src="https://user-images.githubusercontent.com/42792876/198192772-cbfe89a6-5997-43b2-8437-e0e9d5dc5ec7.png">
 
 # HacktoberFest2021-html
 
